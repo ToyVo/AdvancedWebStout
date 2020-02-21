@@ -79,4 +79,38 @@ function simpleQueryParam($db, $query, $ptype, &$param) {
   // return the statement object
   return $stmt;
 }
+
+function complexQueryParam($db, $query, $ptype, &...$params) {
+  // Prepare the query
+  if(!($stmt = $db->prepare($query))) {
+    if (!DBDeets::DB_SILENT_FAIL) {
+      echo "<!-- FAILED QUERY PREPARE: ($db->errno) $db->error -->\n";
+    }
+    return null;
+  }
+
+  // Bind input param
+  if(!($stmt->bind_param($ptype, ...$params))) {
+    if (!DBDeets::DB_SILENT_FAIL) {
+      echo "<!-- FAILED BIND PARAM: Did you leave the proper number and types of ?s in your query -->\n";
+    }
+    return null;
+  }
+
+  // Execute query
+  if(!$stmt->execute()) {
+    if (!DBDeets::DB_SILENT_FAIL) {
+      echo "<!-- FAILED QUERY EXECUTE: check that database and statement are still open and valid -->\n";
+    }
+    return null;
+  }
+
+  // Store the results for SELECT queries
+  if(strpos($query, 'SELECT') !== false) {
+    $stmt->store_result();
+  }
+
+  // return the statement object
+  return $stmt;
+}
 ?>

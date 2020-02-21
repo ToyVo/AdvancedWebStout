@@ -49,7 +49,7 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="/CS404/Module1-1/index.html">1.1</a>
                         <a class="dropdown-item" href="/CS404/Module1-2/movieBrowse.php">1.2</a>
-                        <a class="dropdown-item" href="/CS404/Module1-3/index.html">1.3</a>
+                        <a class="dropdown-item" href="/CS404/Module1-3/index.php">1.3</a>
                     </div>
                 </li>
             </ul>
