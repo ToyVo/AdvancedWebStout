@@ -34,7 +34,7 @@ CREATE TABLE `boardgames` (
   `designers` varchar(200) DEFAULT NULL,
   `artists` varchar(200) DEFAULT NULL,
   `publishers` varchar(200) DEFAULT NULL,
-  `id` mediumint(9) NOT NULL,
+  `id` varchar(6) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -45,7 +45,7 @@ CREATE TABLE `boardgames` (
 
 LOCK TABLES `boardgames` WRITE;
 /*!40000 ALTER TABLE `boardgames` DISABLE KEYS */;
-INSERT INTO `boardgames` VALUES ('from database',2020,8.5,1,3,20,60,18,'designers','artists','publishers',123456);
+INSERT INTO `boardgames` VALUES ('from database',2020,8.5,1,3,20,60,18,'designers','artists','publishers',"123456");
 /*!40000 ALTER TABLE `boardgames` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

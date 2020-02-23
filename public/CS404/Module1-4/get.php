@@ -14,17 +14,16 @@ if (isset($_GET['id'])) {
     $gameID = $_GET['id'];
 
     // 2. Run the Query
-    $query = "SELECT * FROM boardgames WHERE id=?;";
-    $stmt = simpleQueryParam($db, $query, "s", $gameID);
+    $stmt = simpleQueryParam($db, "SELECT * FROM boardgames WHERE id=?", "s", $gameID);
     if ($stmt == NULL) {
         http_response_code(500);
-        die('{ "error": "Query failed - "' . $stmt->error . '" }');
+        die('{ "error": "Query failed - ' . $stmt->error . '" }');
     }
 
     // 3. Get the results of the query
     if(!$results = $stmt->get_result()) {
         http_response_code(500);
-        die('{ "error": "Failed to retrieve results- "' . $stmt->error . '" }');
+        die('{ "error": "Failed to retrieve results - ' . $stmt->error . '" }');
     }
 
     // 4. Output as JSON
@@ -32,7 +31,7 @@ if (isset($_GET['id'])) {
         echo json_encode($game);
     } else {
         http_response_code(404);
-        echo('{"error": "Game not found"}');
+        echo '{"error": "Game not found"}';
     }
 
 } else {
@@ -45,18 +44,14 @@ if (isset($_GET['id'])) {
     $contimue = $stmt->fetch();
     echo "[";
     while ($contimue) {
-        echo('{');
-        echo('"id":', json_encode($gameID), ',');
-        echo('"name":', json_encode($gameName), ',');
-        echo('"publishers":', json_encode($gamePublishers))
-        echo('}')
+        echo('{ "id":' . json_encode($gameID) . ', "name":' . json_encode($gameName) . ', "publishers":' . json_encode($gamePublishers) . '}');
         if($stmt->fetch()) {
-            echo(",");
+            echo ",";
         } else {
             $contimue = false;
         }
     }
-    echo("]");
+    echo "]";
 }
 
 $stmt->close();
