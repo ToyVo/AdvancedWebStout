@@ -16,9 +16,18 @@
   },
   "homepage": "https://github.com/ToyVo/AdvancedWebStout#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0"
   },
   "devDependencies": {
-    "eslint": "^6.8.0"
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.7",
+    "@babel/node": "^7.8.7",
+    "@babel/plugin-transform-async-to-generator": "^7.8.3",
+    "@babel/preset-env": "^7.8.7",
+    "@babel/preset-react": "^7.8.3",
+    "eslint": "^6.8.0",
+    "eslint-plugin-react": "^7.19.0"
   }
 }
