@@ -5,8 +5,8 @@
   "main": "app.js",
   "private": true,
   "scripts": {
-    "start": "babel-node src/gameScraper.js",
-    "build": "babel src -o dist.js"
+    "start": "DEBUG=server nodemon --exec babel-node server/index.js",
+    "start:win": "set DEBUG=app & nodemon --exec babel-node server/index.js"
   },
   "repository": {
     "type": "git",
@@ -19,9 +19,13 @@
   },
   "homepage": "https://github.com/ToyVo/AdvancedWebStout#readme",
   "dependencies": {
+    "bootstrap": "^4.4.1",
+    "chalk": "^3.0.0",
+    "debug": "^4.1.1",
+    "ejs": "^3.0.1",
     "express": "^4.17.1",
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0",
+    "jquery": "^3.4.1",
+    "morgan": "^1.9.1",
     "xml2js": "^0.4.23"
   },
   "devDependencies": {
@@ -30,13 +34,26 @@
     "@babel/node": "^7.8.7",
     "@babel/plugin-transform-async-to-generator": "^7.8.3",
     "@babel/preset-env": "^7.8.7",
-    "@babel/preset-react": "^7.8.3",
+    "@types/express": "^4.17.3",
+    "@types/node": "^13.9.2",
     "eslint": "^6.8.0",
     "eslint-config-standard": "^14.1.0",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-react": "^7.19.0",
-    "eslint-plugin-standard": "^4.0.1"
+    "eslint-plugin-standard": "^4.0.1",
+    "nodemon": "^2.0.2"
+  },
+  "nodemonConfig": {
+    "restartabel": "rs",
+    "ignore": [
+      "node_modules/**/node_modules",
+      "server/public/**"
+    ],
+    "delay": 2500,
+    "env": {
+      "NODE_ENV": "development",
+      "PORT": 4000
+    }
   }
 }
