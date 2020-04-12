@@ -1,7 +1,7 @@
 import https from 'https'
 import fs from 'fs'
 import xml2js from 'xml2js'
-import BoardGame from './public/js/BoardGame'
+import BoardGame from './BoardGame'
 
 const boardGames = []
 let lastId = 1
