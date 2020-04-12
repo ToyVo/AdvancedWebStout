@@ -1,7 +1,10 @@
 import express from 'express'
+
+// bring in the raw json data, we can import it like this instead of doing 
+// fs.readfile, this will bring it in as a javascript object, in this case an array
 import games from './games'
 
-export default function ApiRouter () {
+export default function ApiRouter() {
   const partialGames = games.map(game => ({
     id: game.id,
     name: game.name,
@@ -10,11 +13,13 @@ export default function ApiRouter () {
 
   const router = express.Router()
 
+  // get all games, with partial data
   router.route('/')
     .get((req, res) => {
       res.json(partialGames)
     })
 
+  // get all data for a specific game
   router.route('/:id')
     .get((req, res) => {
       const id = req.params.id

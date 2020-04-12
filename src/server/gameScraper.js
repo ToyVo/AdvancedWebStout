@@ -7,6 +7,9 @@ const boardGames = []
 let lastId = 1
 fetchGames()
 
+/**
+ * keep fetching games until we have 100, then dump it to a json file
+ */
 function fetchGames () {
   fetchGame().then(game => {
     if (boardGames.length < 100) {
@@ -18,6 +21,9 @@ function fetchGames () {
   })
 }
 
+/**
+ * fetch a single game from bgg, if it is valid, parse it to a BoardGame and add it to the array
+ */
 function fetchGame () {
   return new Promise((resolve, reject) => {
     const url = `https://www.boardgamegeek.com/xmlapi2/thing?comments=1&id=${lastId++}`
@@ -43,6 +49,7 @@ function fetchGame () {
   })
 }
 
+// preform get request to get data from url
 function retrieveData (url) {
   return new Promise((resolve, reject) => {
     // send GET request to url
