@@ -7,8 +7,8 @@ import './main.css'
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import Banner from './components/Banner.jsx'
+import App from './components/App.jsx'
 
 document.addEventListener('DOMContentLoaded', () => {
-  ReactDOM.render(<Banner greeting='World' />, document.getElementById('root'))
+  ReactDOM.render(<App />, document.getElementById('root'))
 })
