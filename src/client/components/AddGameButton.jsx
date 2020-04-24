@@ -1,9 +1,11 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 class AddGameButton extends React.Component {
   constructor (props) {
     super(props)
 
+    // information for a single board game entry
     this.state = {
       name: '',
       year: '',
@@ -19,16 +21,23 @@ class AddGameButton extends React.Component {
       id: ''
     }
 
+    // bind functions
     this.openModal = this.openModal.bind(this)
     this.handleInputChange = this.handleInputChange.bind(this)
     this.clearModal = this.clearModal.bind(this)
     this.submitGame = this.submitGame.bind(this)
   }
 
+  /**
+   * open modal, used in the add game button
+   */
   openModal () {
     $('#addGameModal').modal({ backdrop: 'static' })
   }
 
+  /**
+   * when any input element in the form changes, this will update the coresponding value in state
+   */
   handleInputChange (event) {
     const target = event.target
     const value = target.value
@@ -39,7 +48,11 @@ class AddGameButton extends React.Component {
     })
   }
 
+  /**
+   * clean up after submition of a game, or on canceling submition
+   */
   clearModal (event) {
+    // prevent reset form event defaults
     event.preventDefault()
     event.stopPropagation()
 
@@ -50,6 +63,7 @@ class AddGameButton extends React.Component {
     // hide error alert
     $('#addGameAlert').addClass('hidden')
 
+    // reset state to default
     this.setState({
       name: '',
       year: '',
@@ -66,22 +80,60 @@ class AddGameButton extends React.Component {
     })
   }
 
+  /**
+   * handle the submit event
+   * @param {*} event submit event
+   */
   submitGame (event) {
-    // stop submit event
+    // stop submit event defaults
     event.preventDefault()
     event.stopPropagation()
 
+    // get the form
     const form = document.getElementById('newGameForm')
+    // check if the form is valid
     if (form.checkValidity() === false) {
       // apply validation css if validation fails
       form.classList.add('was-validated')
     } else {
-      // Process designers, artists, and publishers, since they should be arrays, but will come in as strings
+      // construct board game from data submitted
+      const boardGame = {
+        // required values
+        name: this.state.name,
+        year: this.state.year,
+        id: this.state.id,
+
+        // optional values, if they are equal to an empty string, put the value as null
+        rating: this.state.rating === '' ? null : this.state.rating,
+        minPlayers: this.state.minPlayers === '' ? null : this.state.minPlayers,
+        maxPlayers: this.state.maxPlayers === '' ? null : this.state.maxPlayers,
+        minPlaytime:
+          this.state.minPlaytime === '' ? null : this.state.minPlaytime,
+        maxPlaytime:
+          this.state.maxPlaytime === '' ? null : this.state.maxPlaytime,
+        minAge: this.state.minAge === '' ? null : this.state.minAge,
+
+        // process the values that are meant to be arrays from strings
+        designers:
+          this.state.designers === ''
+            ? null
+            : this.state.designers.split(',').map((value) => value.trim()),
+        artists:
+          this.state.artists === ''
+            ? null
+            : this.state.artists.split(',').map((value) => value.trim()),
+        publishers:
+          this.state.publishers === ''
+            ? null
+            : this.state.publishers.split(',').map((value) => value.trim()),
+      }
+
       // submit game to backend server to persist changes
       // either send game back up to App.jsx so it can add it to it's state, or send an event prompting it do rerequest data from backend
 
       // this would come in a axios.post().then()
       this.clearModal(event)
+      this.props.submitGame(boardGame)
       // .catch((e) => {$('#addGameAlert').removeClass('hidden')})
     }
   }
@@ -336,6 +388,10 @@ class AddGameButton extends React.Component {
       </div>
     )
   }
+}
+
+AddGameButton.propTypes = {
+  submitGame: PropTypes.func.isRequired
 }
 
 export default AddGameButton

@@ -2,12 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 class GameTile extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.gameTileClicked = this.gameTileClicked.bind(this)
   }
 
-  render() {
+  render () {
     return (
       <div className='col-xs-12 col-sm-6 col-md-4 col-lg-3'>
         <div className='gameSummary'>
@@ -23,7 +23,11 @@ class GameTile extends React.Component {
     )
   }
 
-  gameTileClicked(event) {
+  /**
+   * when the tile is clicked, pass event up to open modal
+   * @param {*} event click event
+   */
+  gameTileClicked (event) {
     event.preventDefault()
     this.props.activeGameCallback(this.props.gameData.id)
   }

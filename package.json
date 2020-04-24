@@ -12,7 +12,7 @@
     "client": "webpack --mode production",
     "client:dev": "webpack --mode development --watch true",
     "client:dev-server": "webpack-dev-server --mode development --watch true",
-    "lint": "eslint --fix ."
+    "lint": "eslint --fix ./src"
   },
   "repository": {
     "type": "git",
