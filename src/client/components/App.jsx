@@ -6,7 +6,7 @@ import GameDetailsModal from './GameDetailsModal.jsx'
 import AddGameButton from './AddGameButton.jsx'
 
 class App extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.state = {
       gamesData: [],
@@ -15,7 +15,7 @@ class App extends React.Component {
     this.setActiveGame = this.setActiveGame.bind(this)
   }
 
-  setActiveGame(gameID) {
+  setActiveGame (gameID) {
     Axios.get(`/api/games/${gameID}`)
       .then((results) => {
         this.setState({
@@ -28,7 +28,7 @@ class App extends React.Component {
       })
   }
 
-  componentDidMount() {
+  componentDidMount () {
     Axios.get('/api/games')
       .then((results) => {
         this.setState({
@@ -41,7 +41,7 @@ class App extends React.Component {
       })
   }
 
-  render() {
+  render () {
     return (
       <div>
         <div className='container'>
