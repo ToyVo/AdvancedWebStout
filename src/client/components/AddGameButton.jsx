@@ -123,9 +123,7 @@ class AddGameButton extends React.Component {
             ? null
             : this.state.artists.split(',').map((value) => value.trim()),
         publishers:
-          this.state.publishers === ''
-            ? null
-            : this.state.publishers.split(',').map((value) => value.trim()),
+          this.state.publishers === '' ? null : this.state.publishers.split(',').map((value) => value.trim())
       }
 
       // submit game to backend server to persist changes

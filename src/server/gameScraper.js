@@ -1,7 +1,8 @@
 import https from 'https'
 import fs from 'fs'
 import xml2js from 'xml2js'
-import BoardGame from './BoardGame'
+import path from 'path'
+import BoardGame from '../BoardGame'
 
 const boardGames = []
 let lastId = 1
@@ -11,12 +12,12 @@ fetchGames()
  * keep fetching games until we have 100, then dump it to a json file
  */
 function fetchGames () {
-  fetchGame().then(game => {
+  fetchGame().then(() => {
     if (boardGames.length < 100) {
       fetchGames()
     } else {
       console.log(boardGames.length)
-      fs.writeFileSync('games.json', JSON.stringify(boardGames))
+      fs.writeFileSync(path.join(__dirname, 'api', 'games.json'), JSON.stringify(boardGames))
     }
   })
 }
@@ -37,6 +38,7 @@ function fetchGame () {
                 const game = BoardGame.parse(result.items.item[0])
                 boardGames.push(game)
                 console.log(game)
+                console.log(boardGames.length)
               }
             }
           }

@@ -45,39 +45,6 @@ export default class BoardGame {
   }
 
   /**
-   * #return {string} a json formatted string containing minimal information
-   */
-  stringifyPartial () {
-    return JSON.stringify({
-      id: this.id, name: this.name, year: this.year
-    })
-  }
-
-  /**
-   * @returns {string} a json formated string of this game
-   */
-  stringify () {
-    return JSON.stringify(this)
-  }
-
-  /**
-   * determines in what way to parse this game
-   * @param {string | {name, yearpublished, minplayers, maxplayers, minplaytime, maxplaytime, minage, link, comments, $} | {name, year, rating, minPlayers, maxPlayers, minPlaytime, maxPlaytime, minAge, designers, artists, publishers, id}} jsonObject
-   */
-  static parse (jsonObject) {
-    if (jsonObject.link) {
-      // will be an object parsed by XML2JS
-      return BoardGame.parseXML2JS(jsonObject)
-    } else if (jsonObject.id) {
-      // will be a javascript object, missing functions of BoardGame
-      return BoardGame.parseJsObject(jsonObject)
-    } else {
-      // will be a plain JSON string
-      return BoardGame.parseJSON(jsonObject)
-    }
-  }
-
-  /**
    * Create a BoardGame from XML2JS
    * @param {{name, yearpublished, minplayers, maxplayers, minplaytime, maxplaytime, minage, link, comments, $}} game a game already parsed from XML by XML2JS
    * @returns {BoardGame} board game object from xml
@@ -105,26 +72,65 @@ export default class BoardGame {
       }
     }
     let ratingCount = 0
-    for (const comment of game.comments[0].comment) {
-      if (comment.$.rating !== 'N/A') {
-        ratingCount++
-        rating += Number.parseFloat(comment.$.rating)
+    if (game.comments && game.comments[0]) {
+      for (const comment of game.comments[0].comment) {
+        if (comment.$.rating !== 'N/A') {
+          ratingCount++
+          rating += Number.parseFloat(comment.$.rating)
+        }
       }
     }
+
     rating = rating / ratingCount
-    return new BoardGame(name,
-      year,
+    return new BoardGame(
+      name,
+      Number.parseInt(year),
       rating,
-      minPlayers,
-      maxPlayers,
-      minPlaytime,
-      maxPlaytime,
-      minAge,
+      Number.parseInt(minPlayers),
+      Number.parseInt(maxPlayers),
+      Number.parseInt(minPlaytime),
+      Number.parseInt(maxPlaytime),
+      Number.parseInt(minAge),
       designers,
       artists,
       publishers,
-      id
+      Number.parseInt(id)
     )
+  }
+
+  /**
+   * @returns {string} a json formated string of this game
+   */
+  stringify () {
+    return JSON.stringify(this)
+  }
+
+  /**
+   * determines in what way to parse this game
+   * @param {string | {name, yearpublished, minplayers, maxplayers, minplaytime, maxplaytime, minage, link, comments, $} | {name, year, rating, minPlayers, maxPlayers, minPlaytime, maxPlaytime, minAge, designers, artists, publishers, id}} jsonObject
+   */
+  static parse (jsonObject) {
+    if (jsonObject.link) {
+      // will be an object parsed by XML2JS
+      return BoardGame.parseXML2JS(jsonObject)
+    } else if (jsonObject.id) {
+      // will be a javascript object, missing functions of BoardGame
+      return BoardGame.parseJsObject(jsonObject)
+    } else {
+      // will be a plain JSON string
+      return BoardGame.parseJSON(jsonObject)
+    }
+  }
+
+  /**
+   * #return {string} a json formatted string containing minimal information
+   */
+  stringifyPartial () {
+    return JSON.stringify({
+      id: this.id,
+      name: this.name,
+      year: this.year
+    })
   }
 
   /**
