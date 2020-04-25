@@ -17,7 +17,7 @@ const port = process.env.PORT || 3000
 const app = express()
 
 // connect to database
-const db = mongoose.connect(process.env.MONGODB_URI)
+mongoose.connect(process.env.MONGODB_URI)
 
 // allow parsing of the body of a request
 app.use(bodyParser.urlencoded({ extended: true }))
