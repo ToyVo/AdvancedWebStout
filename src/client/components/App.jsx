@@ -14,6 +14,7 @@ class App extends React.Component {
     }
     this.setActiveGame = this.setActiveGame.bind(this)
     this.submitGame = this.submitGame.bind(this)
+    this.deleteGame = this.deleteGame.bind(this)
   }
 
   /**
@@ -28,9 +29,15 @@ class App extends React.Component {
         })
       })
       .catch((e) => {
-        console.error('error retriving game data')
+        console.error('error retrieving game data')
         console.error(e.message)
       })
+  }
+
+  deleteGame (gameID) {
+    this.setState({
+      gamesData: this.state.gamesData.filter(game => game._id !== gameID)
+    })
   }
 
   /**
@@ -47,7 +54,7 @@ class App extends React.Component {
     designers: string[],
     artists: string[],
     publishers: string[],
-    id: number
+    _id: string
     }} boardGame board game to be submitted to the database
    */
   submitGame (boardGame) {
@@ -72,25 +79,21 @@ class App extends React.Component {
   }
 
   render () {
-    return (
-      <div>
-        <div className='container'>
-          <div className='row'>
-            <Banner title='Game Browser'>
-              Click on a game for more information
-            </Banner>
-          </div>
-          <GameGrid
-            gamesData={this.state.gamesData}
-            activeGameCallback={this.setActiveGame}
-          />
-          <AddGameButton submitGame={this.submitGame}/>
+    return (<div>
+      <div className='container'>
+        <div className='row'>
+          <Banner title='Game Browser'>
+            Click on a game for more information
+          </Banner>
         </div>
-        {this.state.activeGame && (
-          <GameDetailsModal game={this.state.activeGame} />
-        )}
+        <GameGrid
+          gamesData={this.state.gamesData}
+          activeGameCallback={this.setActiveGame}
+        />
+        <AddGameButton submitGame={this.submitGame}/>
       </div>
-    )
+      {this.state.activeGame && (<GameDetailsModal deleteGame={this.deleteGame} game={this.state.activeGame}/>)}
+    </div>)
   }
 }
 

@@ -2,7 +2,7 @@ import https from 'https'
 import fs from 'fs'
 import xml2js from 'xml2js'
 import path from 'path'
-import BoardGame from '../BoardGame'
+import * as BoardGame from './BoardGame'
 
 const boardGames = []
 let lastId = 1
@@ -17,7 +17,7 @@ function fetchGames () {
       fetchGames()
     } else {
       console.log(boardGames.length)
-      fs.writeFileSync(path.join(__dirname, 'api', 'games.json'), JSON.stringify(boardGames))
+      fs.writeFileSync(path.join(__dirname, 'games.json'), JSON.stringify(boardGames))
     }
   })
 }
