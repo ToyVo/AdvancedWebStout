@@ -1,33 +1,27 @@
 import express from 'express'
-// bring in the raw json data, we can import it like this instead of doing
-// fs.readfile, this will bring it in as a javascript object, in this case an array
-/** @type {BoardGame[]} */
-import games from './games'
+import boardGameController from '../controllers/boardGameController'
 
-export const partialGames = games.map((game) => ({
-  id: game.id,
-  name: game.name,
-  year: game.year
-}))
-
-export default function ApiRouter () {
+export default function ApiRouter (BoardGame) {
   const router = express.Router()
+  const controller = boardGameController(BoardGame)
 
-  // get all games, with partial data
-  router.route('/').get((req, res) => {
-    res.json(partialGames)
-  })
+  router.route('/')
+    // Read all games, with partial data
+    .get(controller.getAll)
+    // Create
+    .post(controller.post)
 
-  // get all data for a specific game
-  router.route('/:id').get((req, res) => {
-    const id = Number.parseInt(req.params.id)
-    const singleGame = games.find((game) => game.id === id)
-    if (singleGame) {
-      res.json(singleGame)
-    } else {
-      res.status(404).json({ error: 'game not found' })
-    }
-  })
+  // middle wear for getting a specific game by an id
+  router.use('/:id', controller.findOne)
+  router.route('/:id')
+    // Read all data for a specific game
+    .get(controller.getOne)
+    // Update a whole object
+    .put(controller.putOne)
+    // Update partial data
+    .patch(controller.patchOne)
+    // Delete
+    .delete(controller.deleteOne)
 
   return router
 }
