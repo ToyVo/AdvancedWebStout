@@ -77,6 +77,7 @@ export default function App () {
       />
       <AddGameButton submitGame={submitGame}/>
     </div>
-    {activeGame && <GameDetailsModal deleteGame={deleteGame} game={activeGame}/>}
+    {activeGame &&
+    <GameDetailsModal onCloseDetailsModal={() => setActiveGame(null)} deleteGame={deleteGame} game={activeGame}/>}
   </div>)
 }
