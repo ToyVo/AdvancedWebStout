@@ -1,18 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
+import Grid from '@material-ui/core/Grid'
 import GameTile from './GameTile.jsx'
 
 export default function GameGrid (props) {
-  return (<div className='col-12'>
-    <div className='row'>
-      {props.gamesData.map((game) => (<GameTile
-        gameData={game}
-        key={game._id}
-        activeGameCallback={props.activeGameCallback}
-      />))}
-    </div>
-  </div>)
+  return (<Grid container>
+    {props.gamesData.map((game) => (<GameTile
+      gameData={game}
+      key={game._id}
+      activeGameCallback={props.activeGameCallback}
+    />))}
+  </Grid>)
 }
 
 GameGrid.propTypes = {
