@@ -5,8 +5,7 @@ import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles((theme) => ({
   banner: {
-    borderBottom: '1px solid grey',
-    padding: theme.spacing(2)
+    borderBottom: '1px solid grey', padding: theme.spacing(2)
   }
 }))
 
@@ -19,10 +18,9 @@ export default function Banner (props) {
 }
 
 Banner.propTypes = {
-  title: PropTypes.string,
-  children: PropTypes.node
+  title: PropTypes.string, children: PropTypes.node
 }
 
 Banner.defaultProps = {
-  title: 'Board Game Browser'
+  title: 'Project Browser'
 }
