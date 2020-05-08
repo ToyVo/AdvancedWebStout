@@ -1,13 +1,15 @@
 import Axios from 'axios'
 import React, { useState } from 'react'
-import AddProjectButton from './AddProjectButton.jsx'
+import EditProjectDialog from './EditProjectDialog.jsx'
 import Banner from './Banner.jsx'
 import ProjectDetailsModal from './ProjectDetailsModal.jsx'
 import ProjectGrid from './ProjectGrid.jsx'
+import AddProjectButton from './AddProjectButton.jsx'
 
-export default function App () {
+export default function App() {
   const [projectsData, setProjectsData] = useState([])
   const [activeProject, setActiveProject] = useState(null)
+  const [activeEditProject, setActiveEditProject] = useState(null)
 
   if (projectsData.length === 0) {
     /**
@@ -47,6 +49,23 @@ export default function App () {
   }
 
   /**
+   * update project to state
+   * @param {{
+    * _id: string,
+    * creator: string,
+    * fileURLs: string[],
+    * imageURLs: string[],
+    * name: string,
+    * publishDate: Date,
+    * updateDate: Date
+     }} project updated from the database
+    */
+  const updateProject = (project) => {
+    deleteProject(project._id)
+    submitProject(project)
+  }
+
+  /**
    * add submitted project to state
    * @param {{
    * _id: string,
@@ -62,6 +81,10 @@ export default function App () {
     setProjectsData([...projectsData, project])
   }
 
+  const editProject = (project) => {
+    setActiveEditProject(project)
+  }
+
   return (
     <div>
 
@@ -72,9 +95,10 @@ export default function App () {
         projectsData={projectsData}
         activeProjectCallback={retrieveActiveProject}
       />
-      <AddProjectButton submitProject={submitProject}/>
-      {activeProject && <ProjectDetailsModal onCloseDetailsModal={() => setActiveProject(null)} deleteProject={deleteProject}
-        project={activeProject}/>}
+      <AddProjectButton editProject={editProject} />
+      {activeEditProject && <EditProjectDialog updateProject={updateProject} submitProject={submitProject} activeEditProject={activeEditProject} />}
+      {activeProject && <ProjectDetailsModal deleteProject={deleteProject}
+        project={activeProject} editProject={editProject} />}
     </div>
   )
 }
