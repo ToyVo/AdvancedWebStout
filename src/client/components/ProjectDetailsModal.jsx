@@ -1,8 +1,9 @@
-import { Button, Dialog, DialogActions, DialogContent, DialogTitle, makeStyles } from '@material-ui/core'
+import { Button, Dialog, DialogActions, DialogContent, DialogTitle, GridList, GridListTile, makeStyles } from '@material-ui/core'
 import Axios from 'axios'
 import PropTypes from 'prop-types'
 import React, { useState, useEffect } from 'react'
 import Transition from '../helpers/Transition.jsx'
+import moment from 'moment'
 
 const useStyles = makeStyles((theme) => (
   {
@@ -12,7 +13,7 @@ const useStyles = makeStyles((theme) => (
   }
 ))
 
-export default function ProjectDetailsModal(props) {
+export default function ProjectDetailsModal (props) {
   const classes = useStyles()
 
   const [open, setOpen] = useState(true)
@@ -53,13 +54,18 @@ export default function ProjectDetailsModal(props) {
       <DialogTitle id='details-dialog-title'>{props.project.name}</DialogTitle>
       <DialogContent>
         <ul>
-          <li>_id = {props.project._id}</li>
           <li>creator = {props.project.creator}</li>
-          <li>imageURLs = {props.project.imageURLs.join(', ')}</li>
-          <li>name = {props.project.name}</li>
-          <li>publishDate = {props.project.publishDate}</li>
-          <li>updateDate = {props.project.updateDate}</li>
+          <li>publishDate = {moment(props.project.publishDate).format('MMM Do YYYY')}</li>
+          <li>updateDate = {moment(props.project.updateDate).fromNow()}</li>
         </ul>
+        <GridList cellHeight={160} cols={3}>
+          {props.project.imageURLs.map((imageURL) => (
+            <GridListTile key={imageURL}>
+              <img src={imageURL} alt={imageURL}/>
+            </GridListTile>
+          ))}
+        </GridList>
+
         {props.project.fileURLs.map((fileURL) => {
           const splitURL = fileURL.split('/')
           return <Button className={classes.downloadButton} key={fileURL} variant='contained' color='primary' href={fileURL} download>{splitURL[splitURL.length - 1]}</Button>
@@ -81,7 +87,5 @@ export default function ProjectDetailsModal(props) {
 }
 
 ProjectDetailsModal.propTypes = {
-  project: PropTypes.object.isRequired,
-  deleteProject: PropTypes.func.isRequired,
-  editProject: PropTypes.func.isRequired
+  project: PropTypes.object.isRequired, deleteProject: PropTypes.func.isRequired, editProject: PropTypes.func.isRequired
 }
