@@ -1,14 +1,27 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Button } from '@material-ui/core'
+import Fab from '@material-ui/core/Fab'
+import AddIcon from '@material-ui/icons/Add'
+import { makeStyles } from '@material-ui/core'
 
-export default function AddProjectButton(props) {
+const useStyles = makeStyles((theme) => (
+  {
+    fab: {
+      position: 'absolute',
+      bottom: theme.spacing(2),
+      right: theme.spacing(2)
+    }
+  }
+))
+
+export default function AddProjectButton (props) {
+  const classes = useStyles()
 
   const editProject = () => {
     props.editProject({})
   }
 
-  return (<Button variant='contained' color='primary' onClick={editProject}>Add Project</Button>)
+  return (<Fab color='primary' aria-label='add' className={classes.fab} onClick={editProject}><AddIcon/></Fab>)
 }
 
 AddProjectButton.propTypes = {
