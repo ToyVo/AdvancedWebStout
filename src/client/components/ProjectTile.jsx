@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import Skeleton from '@material-ui/lab/Skeleton'
 import PropTypes from 'prop-types'
 import React from 'react'
+import Moment from 'moment'
 
 const useStyles = makeStyles((theme) => (
   {
@@ -49,10 +50,10 @@ export default function ProjectTile (props) {
             </Typography>
 
             <Typography variant='body2' color='textSecondary' component='p'>
-              Created: {props.project.publishDate}
+              Created: {Moment(props.project.publishDate).format('MMM Do YYYY')}
             </Typography>
             <Typography variant='body2' color='textSecondary' component='p'>
-              Updated: {props.project.updateDate}
+              Updated: {Moment(props.project.updateDate).fromNow()}
             </Typography>
           </CardContent>
         </CardActionArea>
