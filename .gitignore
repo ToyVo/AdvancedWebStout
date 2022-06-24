@@ -2,3 +2,5 @@ public/CS404/Module1-2/**/*.jpg
 .idea
 node_modules
 .vscode
+public/index.html
+public/app.bundle.js
