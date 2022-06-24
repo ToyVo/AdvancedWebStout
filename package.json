@@ -12,7 +12,9 @@
     "client": "webpack --mode production",
     "client:dev": "webpack --mode development --watch true",
     "client:dev-server": "webpack-dev-server --mode development --watch true",
-    "lint": "eslint --fix ./src"
+    "lint": "eslint --fix ./src",
+    "initialize-db": "babel-node src/server/initialize-db",
+    "game-scraper": "babel-node src/server/gameScraper"
   },
   "repository": {
     "type": "git",
@@ -42,6 +44,7 @@
     "express": "^4.17.1",
     "html-webpack-plugin": "^4.2.0",
     "jquery": "^3.5.0",
+    "mongodb": "^3.5.6",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.3",
     "popper.js": "^1.16.1",
@@ -58,6 +61,7 @@
   "devDependencies": {
     "@types/express": "^4.17.6",
     "@types/jquery": "^3.3.34",
+    "@types/mongodb": "^3.5.10",
     "@types/node": "^13.11.1",
     "@types/react": "^16.9.34",
     "@types/react-dom": "^16.9.6",

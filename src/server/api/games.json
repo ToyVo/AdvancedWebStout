@@ -1,51 +1,68 @@
 [
   {
     "name": "Die Macher",
-    "year": "1986",
+    "year": 1986,
     "rating": 7.70068493150685,
-    "minPlayers": "3",
-    "maxPlayers": "5",
-    "minPlaytime": "240",
-    "maxPlaytime": "240",
-    "minAge": "14",
-    "designers": ["Karl-Heinz Schmiel"],
-    "artists": ["Marcus Gschwendtner", "Harald Lieske"],
+    "minPlayers": 3,
+    "maxPlayers": 5,
+    "minPlaytime": 240,
+    "maxPlaytime": 240,
+    "minAge": 14,
+    "designers": [
+      "Karl-Heinz Schmiel"
+    ],
+    "artists": [
+      "Marcus Gschwendtner",
+      "Harald Lieske"
+    ],
     "publishers": [
       "Hans im Glück",
       "Moskito Spiele",
+      "Portal Games",
       "Spielworxx",
       "sternenschimmermeer",
       "Stronghold Games",
       "Valley Games, Inc.",
       "YOKA Games"
     ],
-    "id": "1"
+    "id": 1
   },
   {
     "name": "Dragonmaster",
-    "year": "1981",
+    "year": 1981,
     "rating": 6.668115942028986,
-    "minPlayers": "3",
-    "maxPlayers": "4",
-    "minPlaytime": "30",
-    "maxPlaytime": "30",
-    "minAge": "12",
-    "designers": ["G. W. \"Jerry\" D'Arcey"],
-    "artists": ["Bob Pepper"],
-    "publishers": ["E.S. Lowe", "Milton Bradley"],
-    "id": "2"
+    "minPlayers": 3,
+    "maxPlayers": 4,
+    "minPlaytime": 30,
+    "maxPlaytime": 30,
+    "minAge": 12,
+    "designers": [
+      "G. W. \"Jerry\" D'Arcey"
+    ],
+    "artists": [
+      "Bob Pepper"
+    ],
+    "publishers": [
+      "E.S. Lowe",
+      "Milton Bradley"
+    ],
+    "id": 2
   },
   {
     "name": "Samurai",
-    "year": "1998",
-    "rating": 7.629411764705883,
-    "minPlayers": "2",
-    "maxPlayers": "4",
-    "minPlaytime": "30",
-    "maxPlaytime": "60",
-    "minAge": "10",
-    "designers": ["Reiner Knizia"],
-    "artists": ["Franz Vohwinkel"],
+    "year": 1998,
+    "rating": 7.635294117647059,
+    "minPlayers": 2,
+    "maxPlayers": 4,
+    "minPlaytime": 30,
+    "maxPlaytime": 60,
+    "minAge": 10,
+    "designers": [
+      "Reiner Knizia"
+    ],
+    "artists": [
+      "Franz Vohwinkel"
+    ],
     "publishers": [
       "Fantasy Flight Games",
       "Hans im Glück",
@@ -65,33 +82,44 @@
       "Smart Ltd",
       "Wargames Club Publishing"
     ],
-    "id": "3"
+    "id": 3
   },
   {
     "name": "Tal der Könige",
-    "year": "1992",
+    "year": 1992,
     "rating": 6.550675675675675,
-    "minPlayers": "2",
-    "maxPlayers": "4",
-    "minPlaytime": "60",
-    "maxPlaytime": "60",
-    "minAge": "12",
-    "designers": ["Christian Beierer"],
-    "artists": ["Thomas di Paolo"],
-    "publishers": ["KOSMOS"],
-    "id": "4"
+    "minPlayers": 2,
+    "maxPlayers": 4,
+    "minPlaytime": 60,
+    "maxPlaytime": 60,
+    "minAge": 12,
+    "designers": [
+      "Christian Beierer"
+    ],
+    "artists": [
+      "Thomas di Paolo"
+    ],
+    "publishers": [
+      "KOSMOS"
+    ],
+    "id": 4
   },
   {
     "name": "Acquire",
-    "year": "1964",
+    "year": 1964,
     "rating": 7.533536585365853,
-    "minPlayers": "2",
-    "maxPlayers": "6",
-    "minPlaytime": "90",
-    "maxPlaytime": "90",
-    "minAge": "12",
-    "designers": ["Sid Sackson"],
-    "artists": ["Scott Okumura", "Peter Whitley"],
+    "minPlayers": 2,
+    "maxPlayers": 6,
+    "minPlaytime": 90,
+    "maxPlaytime": 90,
+    "minAge": 12,
+    "designers": [
+      "Sid Sackson"
+    ],
+    "artists": [
+      "Scott Okumura",
+      "Peter Whitley"
+    ],
     "publishers": [
       "3M",
       "The Avalon Hill Game Co",
@@ -105,33 +133,43 @@
       "Selecta Spel en Hobby",
       "Smart Games, Inc."
     ],
-    "id": "5"
+    "id": 5
   },
   {
     "name": "Mare Mediterraneum",
-    "year": "1989",
+    "year": 1989,
     "rating": 6.161764705882353,
-    "minPlayers": "2",
-    "maxPlayers": "6",
-    "minPlaytime": "240",
-    "maxPlaytime": "240",
-    "minAge": "12",
-    "designers": ["Jean du Poël"],
-    "artists": ["Jean du Poël"],
-    "publishers": ["Historien Spiele Galerie (Historien Spielegalerie)"],
-    "id": "6"
+    "minPlayers": 2,
+    "maxPlayers": 6,
+    "minPlaytime": 240,
+    "maxPlaytime": 240,
+    "minAge": 12,
+    "designers": [
+      "Jean du Poël"
+    ],
+    "artists": [
+      "Jean du Poël"
+    ],
+    "publishers": [
+      "Historien Spiele Galerie (Historien Spielegalerie)"
+    ],
+    "id": 6
   },
   {
     "name": "Cathedral",
-    "year": "1978",
+    "year": 1978,
     "rating": 6.657222222222222,
-    "minPlayers": "2",
-    "maxPlayers": "2",
-    "minPlaytime": "20",
-    "maxPlaytime": "20",
-    "minAge": "8",
-    "designers": ["Robert P. Moore"],
-    "artists": ["S. Mattusek"],
+    "minPlayers": 2,
+    "maxPlayers": 2,
+    "minPlaytime": 20,
+    "maxPlaytime": 20,
+    "minAge": 8,
+    "designers": [
+      "Robert P. Moore"
+    ],
+    "artists": [
+      "S. Mattusek"
+    ],
     "publishers": [
       "Brightway Products Ltd",
       "Falomir Juegos",
@@ -144,47 +182,67 @@
       "Robert P. Moore Games",
       "Yangxin Industrial Company Limited"
     ],
-    "id": "7"
+    "id": 7
   },
   {
     "name": "Lords of Creation",
-    "year": "1993",
+    "year": 1993,
     "rating": 5.829245283018868,
-    "minPlayers": "2",
-    "maxPlayers": "5",
-    "minPlaytime": "120",
-    "maxPlaytime": "120",
-    "minAge": "12",
-    "designers": ["Martin Wallace"],
-    "artists": ["Bryan King"],
-    "publishers": ["Vendetta", "Warfrog Games"],
-    "id": "8"
+    "minPlayers": 2,
+    "maxPlayers": 5,
+    "minPlaytime": 120,
+    "maxPlaytime": 120,
+    "minAge": 12,
+    "designers": [
+      "Martin Wallace"
+    ],
+    "artists": [
+      "Bryan King"
+    ],
+    "publishers": [
+      "Vendetta",
+      "Warfrog Games"
+    ],
+    "id": 8
   },
   {
     "name": "El Caballero",
-    "year": "1998",
+    "year": 1998,
     "rating": 6.453521126760563,
-    "minPlayers": "2",
-    "maxPlayers": "4",
-    "minPlaytime": "90",
-    "maxPlaytime": "90",
-    "minAge": "13",
-    "designers": ["Wolfgang Kramer", "Richard Ulrich"],
-    "artists": ["Doris Matthäus"],
-    "publishers": ["999 Games", "Hans im Glück", "Rio Grande Games"],
-    "id": "9"
+    "minPlayers": 2,
+    "maxPlayers": 4,
+    "minPlaytime": 90,
+    "maxPlaytime": 90,
+    "minAge": 13,
+    "designers": [
+      "Wolfgang Kramer",
+      "Richard Ulrich"
+    ],
+    "artists": [
+      "Doris Matthäus"
+    ],
+    "publishers": [
+      "999 Games",
+      "Hans im Glück",
+      "Rio Grande Games"
+    ],
+    "id": 9
   },
   {
     "name": "Elfenland",
-    "year": "1998",
-    "rating": 7.001097560975609,
-    "minPlayers": "2",
-    "maxPlayers": "6",
-    "minPlaytime": "60",
-    "maxPlaytime": "60",
-    "minAge": "10",
-    "designers": ["Alan R. Moon"],
-    "artists": ["Doris Matthäus"],
+    "year": 1998,
+    "rating": 7.007195121951218,
+    "minPlayers": 2,
+    "maxPlayers": 6,
+    "minPlaytime": 60,
+    "maxPlaytime": 60,
+    "minAge": 10,
+    "designers": [
+      "Alan R. Moon"
+    ],
+    "artists": [
+      "Doris Matthäus"
+    ],
     "publishers": [
       "AMIGO",
       "999 Games",
@@ -193,18 +251,20 @@
       "Midgaard Games",
       "Rio Grande Games"
     ],
-    "id": "10"
+    "id": 10
   },
   {
     "name": "Bohnanza",
-    "year": "1997",
-    "rating": 7.245670731707317,
-    "minPlayers": "2",
-    "maxPlayers": "7",
-    "minPlaytime": "45",
-    "maxPlaytime": "45",
-    "minAge": "13",
-    "designers": ["Uwe Rosenberg"],
+    "year": 1997,
+    "rating": 7.2548765432098765,
+    "minPlayers": 2,
+    "maxPlayers": 7,
+    "minPlaytime": 45,
+    "maxPlaytime": 45,
+    "minAge": 13,
+    "designers": [
+      "Uwe Rosenberg"
+    ],
     "artists": [
       "Fréderic Bertrand",
       "Marek Bláha",
@@ -249,19 +309,24 @@
       "Swan Panasia Co., Ltd.",
       "Tempo Games"
     ],
-    "id": "11"
+    "id": 11
   },
   {
     "name": "Ra",
-    "year": "1999",
-    "rating": 7.622476404494382,
-    "minPlayers": "2",
-    "maxPlayers": "5",
-    "minPlaytime": "45",
-    "maxPlaytime": "60",
-    "minAge": "12",
-    "designers": ["Reiner Knizia"],
-    "artists": ["Allison Kline", "Franz Vohwinkel"],
+    "year": 1999,
+    "rating": 7.64607191011236,
+    "minPlayers": 2,
+    "maxPlayers": 5,
+    "minPlaytime": 45,
+    "maxPlaytime": 60,
+    "minAge": 12,
+    "designers": [
+      "Reiner Knizia"
+    ],
+    "artists": [
+      "Allison Kline",
+      "Franz Vohwinkel"
+    ],
     "publishers": [
       "alea",
       "Ravensburger Spieleverlag GmbH",
@@ -275,18 +340,20 @@
       "Überplay",
       "Windrider Games"
     ],
-    "id": "12"
+    "id": 12
   },
   {
     "name": "Catan",
-    "year": "1995",
-    "rating": 7.058522727272727,
-    "minPlayers": "3",
-    "maxPlayers": "4",
-    "minPlaytime": "60",
-    "maxPlaytime": "120",
-    "minAge": "10",
-    "designers": ["Klaus Teuber"],
+    "year": 1995,
+    "rating": 7.069886363636363,
+    "minPlayers": 3,
+    "maxPlayers": 4,
+    "minPlaytime": 60,
+    "maxPlaytime": 120,
+    "minAge": 10,
+    "designers": [
+      "Klaus Teuber"
+    ],
     "artists": [
       "Volkan Baga",
       "Tanja Donner",
@@ -343,35 +410,41 @@
       "Top Toys",
       "TRY SOFT"
     ],
-    "id": "13"
+    "id": 13
   },
   {
     "name": "Basari",
-    "year": "1998",
-    "rating": 6.861111111111111,
-    "minPlayers": "3",
-    "maxPlayers": "4",
-    "minPlaytime": "25",
-    "maxPlaytime": "25",
-    "minAge": "10",
-    "designers": ["Reinhard Staupe"],
-    "artists": ["John Kovalic", "Lüders & Baran", "Stefan Theurer"],
+    "year": 1998,
+    "rating": 6.865168539325842,
+    "minPlayers": 3,
+    "maxPlayers": 4,
+    "minPlaytime": 25,
+    "maxPlaytime": 25,
+    "minAge": 10,
+    "designers": [
+      "Reinhard Staupe"
+    ],
+    "artists": [
+      "John Kovalic",
+      "Lüders & Baran",
+      "Stefan Theurer"
+    ],
     "publishers": [
       "F.X. Schmid",
       "New Games Order, LLC",
       "Out of the Box Publishing"
     ],
-    "id": "14"
+    "id": 14
   },
   {
     "name": "Cosmic Encounter",
-    "year": "1977",
+    "year": 1977,
     "rating": 7.191749999999999,
-    "minPlayers": "2",
-    "maxPlayers": "6",
-    "minPlaytime": "90",
-    "maxPlaytime": "90",
-    "minAge": "12",
+    "minPlayers": 2,
+    "maxPlayers": 6,
+    "minPlaytime": 90,
+    "maxPlaytime": 90,
+    "minAge": 12,
     "designers": [
       "Bill Eberle",
       "Jack Kittredge",
@@ -396,32 +469,41 @@
       "Tsukuda Hobby / Original",
       "West End Games"
     ],
-    "id": "15"
+    "id": 15
   },
   {
     "name": "MarraCash",
-    "year": "1996",
-    "rating": 6.991176470588235,
-    "minPlayers": "3",
-    "maxPlayers": "4",
-    "minPlaytime": "60",
-    "maxPlaytime": "60",
-    "minAge": "12",
-    "designers": ["Stefan Dorra"],
-    "artists": ["Marion Pott", "Oliver Vogel"],
-    "publishers": ["KOSMOS"],
-    "id": "16"
+    "year": 1996,
+    "rating": 7.002941176470588,
+    "minPlayers": 3,
+    "maxPlayers": 4,
+    "minPlaytime": 60,
+    "maxPlaytime": 60,
+    "minAge": 12,
+    "designers": [
+      "Stefan Dorra"
+    ],
+    "artists": [
+      "Marion Pott",
+      "Oliver Vogel"
+    ],
+    "publishers": [
+      "KOSMOS"
+    ],
+    "id": 16
   },
   {
     "name": "Button Men",
-    "year": "1999",
+    "year": 1999,
     "rating": 6.443827160493826,
-    "minPlayers": "2",
-    "maxPlayers": "2",
-    "minPlaytime": "5",
-    "maxPlaytime": "5",
-    "minAge": "10",
-    "designers": ["James Ernest"],
+    "minPlayers": 2,
+    "maxPlayers": 2,
+    "minPlaytime": 5,
+    "maxPlaytime": 5,
+    "minAge": 10,
+    "designers": [
+      "James Ernest"
+    ],
     "artists": [
       "Pete Abrams",
       "Gerald Brom",
@@ -447,18 +529,20 @@
       "Studio Foglio",
       "Truant Spiele"
     ],
-    "id": "17"
+    "id": 17
   },
   {
     "name": "RoboRally",
-    "year": "1994",
+    "year": 1994,
     "rating": 7.101764705882353,
-    "minPlayers": "2",
-    "maxPlayers": "8",
-    "minPlaytime": "45",
-    "maxPlaytime": "120",
-    "minAge": "12",
-    "designers": ["Richard Garfield"],
+    "minPlayers": 2,
+    "maxPlayers": 8,
+    "minPlaytime": 45,
+    "maxPlaytime": 120,
+    "minAge": 12,
+    "designers": [
+      "Richard Garfield"
+    ],
     "artists": [
       "Peter Bergting",
       "Bob Carasca",
@@ -477,60 +561,82 @@
       "Hasbro",
       "Play Factory"
     ],
-    "id": "18"
+    "id": 18
   },
   {
     "name": "Wacky Wacky West",
-    "year": "1991",
-    "rating": 6.122857142857143,
-    "minPlayers": "2",
-    "maxPlayers": "4",
-    "minPlaytime": "30",
-    "maxPlaytime": "45",
-    "minAge": "9",
-    "designers": ["Klaus Teuber"],
-    "artists": ["Chris McGloughlin", "Franz Vohwinkel"],
-    "publishers": ["Hans im Glück", "Mayfair Games"],
-    "id": "19"
+    "year": 1991,
+    "rating": 6.131884057971014,
+    "minPlayers": 2,
+    "maxPlayers": 4,
+    "minPlaytime": 30,
+    "maxPlaytime": 45,
+    "minAge": 9,
+    "designers": [
+      "Klaus Teuber"
+    ],
+    "artists": [
+      "Chris McGloughlin",
+      "Franz Vohwinkel"
+    ],
+    "publishers": [
+      "Hans im Glück",
+      "Mayfair Games"
+    ],
+    "id": 19
   },
   {
     "name": "Full Metal Planète",
-    "year": "1988",
-    "rating": 7.561267605633802,
-    "minPlayers": "2",
-    "maxPlayers": "4",
-    "minPlaytime": "90",
-    "maxPlaytime": "90",
-    "minAge": "12",
-    "designers": ["Gérard Delfanti", "Gérard Mathieu", "Pascal Trigaux"],
-    "artists": ["Pascal Trigaux"],
-    "publishers": ["Ludodélire"],
-    "id": "20"
+    "year": 1988,
+    "rating": 7.595138888888887,
+    "minPlayers": 2,
+    "maxPlayers": 4,
+    "minPlaytime": 90,
+    "maxPlaytime": 90,
+    "minAge": 12,
+    "designers": [
+      "Gérard Delfanti",
+      "Gérard Mathieu",
+      "Pascal Trigaux"
+    ],
+    "artists": [
+      "Pascal Trigaux"
+    ],
+    "publishers": [
+      "Ludodélire"
+    ],
+    "id": 20
   },
   {
     "name": "Gateway to the Stars",
-    "year": "1994",
+    "year": 1994,
     "rating": 5.142857142857143,
-    "minPlayers": "1",
-    "maxPlayers": "7",
-    "minPlaytime": "0",
-    "maxPlaytime": "0",
-    "minAge": "12",
-    "designers": ["Mark A. Snowden"],
+    "minPlayers": 1,
+    "maxPlayers": 7,
+    "minPlaytime": 0,
+    "maxPlaytime": 0,
+    "minAge": 12,
+    "designers": [
+      "Mark A. Snowden"
+    ],
     "artists": [],
-    "publishers": ["Twentieth Century Renaissance"],
-    "id": "21"
+    "publishers": [
+      "Twentieth Century Renaissance"
+    ],
+    "id": 21
   },
   {
     "name": "Magic Realm",
-    "year": "1979",
-    "rating": 7.776428571428572,
-    "minPlayers": "1",
-    "maxPlayers": "16",
-    "minPlaytime": "240",
-    "maxPlaytime": "240",
-    "minAge": "12",
-    "designers": ["Richard Hamblen"],
+    "year": 1979,
+    "rating": 7.733046875,
+    "minPlayers": 1,
+    "maxPlayers": 16,
+    "minPlaytime": 240,
+    "maxPlaytime": 240,
+    "minAge": 12,
+    "designers": [
+      "Richard Hamblen"
+    ],
     "artists": [
       "George Goebel",
       "Kim Grommel",
@@ -538,97 +644,132 @@
       "Randall C. Reed",
       "Chris White (I)"
     ],
-    "publishers": ["The Avalon Hill Game Co", "Hobby Japan"],
-    "id": "22"
+    "publishers": [
+      "The Avalon Hill Game Co",
+      "Hobby Japan"
+    ],
+    "id": 22
   },
   {
     "name": "Divine Right",
-    "year": "1979",
-    "rating": 7.294366197183098,
-    "minPlayers": "2",
-    "maxPlayers": "6",
-    "minPlaytime": "360",
-    "maxPlaytime": "360",
-    "minAge": "12",
-    "designers": ["Glenn Rahman", "Kenneth Rahman"],
+    "year": 1979,
+    "rating": 7.301408450704225,
+    "minPlayers": 2,
+    "maxPlayers": 6,
+    "minPlaytime": 360,
+    "maxPlaytime": 360,
+    "minAge": 12,
+    "designers": [
+      "Glenn Rahman",
+      "Kenneth Rahman"
+    ],
     "artists": [
       "Kenneth Rahman",
       "David C. Sutherland, III",
       "David A. Trampier"
     ],
-    "publishers": ["Right Stuf", "TSR"],
-    "id": "23"
+    "publishers": [
+      "Right Stuf",
+      "TSR"
+    ],
+    "id": 23
   },
   {
     "name": "Twilight Imperium",
-    "year": "1997",
+    "year": 1997,
     "rating": 6.325333333333333,
-    "minPlayers": "2",
-    "maxPlayers": "6",
-    "minPlaytime": "240",
-    "maxPlaytime": "240",
-    "minAge": "12",
-    "designers": ["Christian T. Petersen"],
-    "artists": ["Bill Heagy"],
-    "publishers": ["Fantasy Flight Games"],
-    "id": "24"
+    "minPlayers": 2,
+    "maxPlayers": 6,
+    "minPlaytime": 240,
+    "maxPlaytime": 240,
+    "minAge": 12,
+    "designers": [
+      "Christian T. Petersen"
+    ],
+    "artists": [
+      "Bill Heagy"
+    ],
+    "publishers": [
+      "Fantasy Flight Games"
+    ],
+    "id": 24
   },
   {
     "name": "Battlemist",
-    "year": "1998",
+    "year": 1998,
     "rating": 5.489041095890411,
-    "minPlayers": "2",
-    "maxPlayers": "6",
-    "minPlaytime": "200",
-    "maxPlaytime": "200",
-    "minAge": "12",
-    "designers": ["Christian T. Petersen"],
-    "artists": ["Bill Heagy", "Christian T. Petersen"],
-    "publishers": ["Fantasy Flight Games"],
-    "id": "25"
+    "minPlayers": 2,
+    "maxPlayers": 6,
+    "minPlaytime": 200,
+    "maxPlaytime": 200,
+    "minAge": 12,
+    "designers": [
+      "Christian T. Petersen"
+    ],
+    "artists": [
+      "Bill Heagy",
+      "Christian T. Petersen"
+    ],
+    "publishers": [
+      "Fantasy Flight Games"
+    ],
+    "id": 25
   },
   {
     "name": "Age of Renaissance",
-    "year": "1996",
+    "year": 1996,
     "rating": 6.997333333333333,
-    "minPlayers": "3",
-    "maxPlayers": "6",
-    "minPlaytime": "120",
-    "maxPlaytime": "300",
-    "minAge": "12",
-    "designers": ["Don Greenwood", "Jared Scarborough"],
-    "artists": ["Stephen Langmead", "Kurt Miller"],
-    "publishers": ["The Avalon Hill Game Co", "Descartes Editeur"],
-    "id": "26"
+    "minPlayers": 3,
+    "maxPlayers": 6,
+    "minPlaytime": 120,
+    "maxPlaytime": 300,
+    "minAge": 12,
+    "designers": [
+      "Don Greenwood",
+      "Jared Scarborough"
+    ],
+    "artists": [
+      "Stephen Langmead",
+      "Kurt Miller"
+    ],
+    "publishers": [
+      "The Avalon Hill Game Co",
+      "Descartes Editeur"
+    ],
+    "id": 26
   },
   {
     "name": "Supremacy",
-    "year": "1984",
+    "year": 1984,
     "rating": 4.850641025641026,
-    "minPlayers": "2",
-    "maxPlayers": "6",
-    "minPlaytime": "340",
-    "maxPlaytime": "340",
-    "minAge": "12",
-    "designers": ["Robert J. Simpson"],
+    "minPlayers": 2,
+    "maxPlayers": 6,
+    "minPlaytime": 340,
+    "maxPlaytime": 340,
+    "minAge": 12,
+    "designers": [
+      "Robert J. Simpson"
+    ],
     "artists": [],
     "publishers": [
       "Descartes Editeur",
       "Grow Jogos e Brinquedos",
       "Supremacy Games"
     ],
-    "id": "27"
+    "id": 27
   },
   {
     "name": "Illuminati (Second Edition)",
-    "year": "1987",
+    "year": 1987,
     "rating": 6.717567567567567,
-    "minPlayers": "2",
-    "maxPlayers": "8",
-    "minPlaytime": "60",
-    "maxPlaytime": "180",
-    "minAge": "12",
-    "designers": ["Steve Jackson (I)"],
+    "minPlayers": 2,
+    "maxPlayers": 8,
+    "minPlaytime": 60,
+    "maxPlaytime": 180,
+    "minAge": 12,
+    "designers": [
+      "Steve Jackson (I)"
+    ],
     "artists": [
       "Lar DeSouza",
       "Jeffrey D. George",
@@ -654,47 +795,66 @@
       "Raven Distribution",
       "Ubik"
     ],
-    "id": "28"
+    "id": 28
   },
   {
     "name": "Terrain Vague",
-    "year": "1993",
+    "year": 1993,
     "rating": 6.625,
-    "minPlayers": "2",
-    "maxPlayers": "4",
-    "minPlaytime": "120",
-    "maxPlaytime": "120",
-    "minAge": "10",
-    "designers": ["Franck Parcabe", "Roland Scaron"],
-    "artists": ["Jacques Tardi"],
-    "publishers": ["Ludodélire"],
-    "id": "29"
+    "minPlayers": 2,
+    "maxPlayers": 4,
+    "minPlaytime": 120,
+    "maxPlaytime": 120,
+    "minAge": 10,
+    "designers": [
+      "Franck Parcabe",
+      "Roland Scaron"
+    ],
+    "artists": [
+      "Jacques Tardi"
+    ],
+    "publishers": [
+      "Ludodélire"
+    ],
+    "id": 29
   },
   {
     "name": "Dark Tower",
-    "year": "1981",
+    "year": 1981,
     "rating": 6.262133333333334,
-    "minPlayers": "1",
-    "maxPlayers": "4",
-    "minPlaytime": "90",
-    "maxPlaytime": "90",
-    "minAge": "10",
-    "designers": ["Roger Burten", "Alan Coleman", "Vincent A. A. J. Erato"],
-    "artists": ["Bob Pepper"],
-    "publishers": ["Milton Bradley"],
-    "id": "30"
+    "minPlayers": 1,
+    "maxPlayers": 4,
+    "minPlaytime": 90,
+    "maxPlaytime": 90,
+    "minAge": 10,
+    "designers": [
+      "Roger Burten",
+      "Alan Coleman",
+      "Vincent A. A. J. Erato"
+    ],
+    "artists": [
+      "Bob Pepper"
+    ],
+    "publishers": [
+      "Milton Bradley"
+    ],
+    "id": 30
   },
   {
     "name": "Dark World",
-    "year": "1991",
+    "year": 1991,
     "rating": 4.949999999999999,
-    "minPlayers": "2",
-    "maxPlayers": "5",
-    "minPlaytime": "90",
-    "maxPlaytime": "90",
-    "minAge": "10",
-    "designers": ["Eamon Bloomfield"],
-    "artists": ["Chris Baker"],
+    "minPlayers": 2,
+    "maxPlayers": 5,
+    "minPlaytime": 90,
+    "maxPlaytime": 90,
+    "minAge": 10,
+    "designers": [
+      "Eamon Bloomfield"
+    ],
+    "artists": [
+      "Chris Baker"
+    ],
     "publishers": [
       "AS Company",
       "Canada Games",
@@ -707,19 +867,23 @@
       "Selecta Spel en Hobby",
       "Waddingtons"
     ],
-    "id": "31"
+    "id": 31
   },
   {
     "name": "Buffalo Chess",
-    "year": "1975",
-    "rating": 5.807575757575758,
-    "minPlayers": "2",
-    "maxPlayers": "2",
-    "minPlaytime": "30",
-    "maxPlaytime": "30",
-    "minAge": "8",
-    "designers": ["Alex Randolph"],
-    "artists": ["Lisa Plangger"],
+    "year": 1975,
+    "rating": 5.780597014925373,
+    "minPlayers": 2,
+    "maxPlayers": 2,
+    "minPlaytime": 30,
+    "maxPlaytime": 30,
+    "minAge": 8,
+    "designers": [
+      "Alex Randolph"
+    ],
+    "artists": [
+      "Lisa Plangger"
+    ],
     "publishers": [
       "Action GT",
       "BHS Games",
@@ -731,112 +895,160 @@
       "Venice Connection",
       "Winning Moves France"
     ],
-    "id": "32"
+    "id": 32
   },
   {
     "name": "Arkham Horror",
-    "year": "1987",
-    "rating": 6.574999999999999,
-    "minPlayers": "1",
-    "maxPlayers": "8",
-    "minPlaytime": "180",
-    "maxPlaytime": "180",
-    "minAge": "12",
+    "year": 1987,
+    "rating": 6.588513513513513,
+    "minPlayers": 1,
+    "maxPlayers": 8,
+    "minPlaytime": 180,
+    "maxPlaytime": 180,
+    "minAge": 12,
     "designers": [
       "Charlie Krank",
       "Richard Launius",
       "Sandy Petersen",
       "Lynn Willis"
     ],
-    "artists": ["Tom Sullivan"],
-    "publishers": ["Chaosium", "Descartes Editeur", "Hobby Japan"],
-    "id": "34"
+    "artists": [
+      "Tom Sullivan"
+    ],
+    "publishers": [
+      "Chaosium",
+      "Descartes Editeur",
+      "Hobby Japan"
+    ],
+    "id": 34
   },
   {
     "name": "Federation & Empire",
-    "year": "1986",
-    "rating": 5.957352941176471,
-    "minPlayers": "2",
-    "maxPlayers": "8",
-    "minPlaytime": "300",
-    "maxPlaytime": "300",
-    "minAge": "12",
-    "designers": ["Stephen V. Cole"],
-    "artists": ["William H. Keith, Jr.", "David Martin (II)"],
-    "publishers": ["Amarillo Design Bureau, Inc.", "Task Force Games"],
-    "id": "36"
+    "year": 1986,
+    "rating": 5.956716417910448,
+    "minPlayers": 2,
+    "maxPlayers": 8,
+    "minPlaytime": 300,
+    "maxPlaytime": 300,
+    "minAge": 12,
+    "designers": [
+      "Stephen V. Cole"
+    ],
+    "artists": [
+      "William H. Keith, Jr.",
+      "David Martin (II)"
+    ],
+    "publishers": [
+      "Amarillo Design Bureau, Inc.",
+      "Task Force Games"
+    ],
+    "id": 36
   },
   {
     "name": "Dragon Masters",
-    "year": "1991",
+    "year": 1991,
     "rating": 5.45,
-    "minPlayers": "2",
-    "maxPlayers": "4",
-    "minPlaytime": "120",
-    "maxPlaytime": "120",
-    "minAge": "12",
-    "designers": ["Ian Livingstone"],
-    "artists": ["Christos Achilleos"],
-    "publishers": ["Games Workshop Ltd."],
-    "id": "37"
+    "minPlayers": 2,
+    "maxPlayers": 4,
+    "minPlaytime": 120,
+    "maxPlaytime": 120,
+    "minAge": 12,
+    "designers": [
+      "Ian Livingstone"
+    ],
+    "artists": [
+      "Christos Achilleos"
+    ],
+    "publishers": [
+      "Games Workshop Ltd."
+    ],
+    "id": 37
   },
   {
     "name": "Runes",
-    "year": "1981",
+    "year": 1981,
     "rating": 6.083333333333333,
-    "minPlayers": "2",
-    "maxPlayers": "4",
-    "minPlaytime": "30",
-    "maxPlaytime": "30",
-    "minAge": "10",
-    "designers": ["Bill Eberle", "Jack Kittredge", "Peter Olotka"],
-    "artists": ["(Uncredited)", "Linda Bound", "Franz-Josef Schulte"],
-    "publishers": ["Eon", "franjos Spieleverlag"],
-    "id": "38"
+    "minPlayers": 2,
+    "maxPlayers": 4,
+    "minPlaytime": 30,
+    "maxPlaytime": 30,
+    "minAge": 10,
+    "designers": [
+      "Bill Eberle",
+      "Jack Kittredge",
+      "Peter Olotka"
+    ],
+    "artists": [
+      "(Uncredited)",
+      "Linda Bound",
+      "Franz-Josef Schulte"
+    ],
+    "publishers": [
+      "Eon",
+      "franjos Spieleverlag"
+    ],
+    "id": 38
   },
   {
     "name": "Darkover",
-    "year": "1979",
-    "rating": 5.322222222222222,
-    "minPlayers": "2",
-    "maxPlayers": "4",
-    "minPlaytime": "60",
-    "maxPlaytime": "60",
-    "minAge": "12",
-    "designers": ["Bill Eberle", "Jack Kittredge", "Peter Olotka"],
-    "artists": ["Hannah M. G. Shapero"],
-    "publishers": ["Eon"],
-    "id": "39"
+    "year": 1979,
+    "rating": 5.284090909090909,
+    "minPlayers": 2,
+    "maxPlayers": 4,
+    "minPlaytime": 60,
+    "maxPlaytime": 60,
+    "minAge": 12,
+    "designers": [
+      "Bill Eberle",
+      "Jack Kittredge",
+      "Peter Olotka"
+    ],
+    "artists": [
+      "Hannah M. G. Shapero"
+    ],
+    "publishers": [
+      "Eon"
+    ],
+    "id": 39
   },
   {
     "name": "Borderlands",
-    "year": "1982",
-    "rating": 6.637931034482759,
-    "minPlayers": "2",
-    "maxPlayers": "4",
-    "minPlaytime": "120",
-    "maxPlaytime": "120",
-    "minAge": "12",
-    "designers": ["Bill Eberle", "Jack Kittredge", "Peter Olotka"],
-    "artists": ["Frank Frazetta", "Dean Morrissey"],
+    "year": 1982,
+    "rating": 6.593220338983051,
+    "minPlayers": 2,
+    "maxPlayers": 4,
+    "minPlaytime": 120,
+    "maxPlaytime": 120,
+    "minAge": 12,
+    "designers": [
+      "Bill Eberle",
+      "Jack Kittredge",
+      "Peter Olotka"
+    ],
+    "artists": [
+      "Frank Frazetta",
+      "Dean Morrissey"
+    ],
     "publishers": [
       "Edition Spielkunst",
       "Eon",
       "Tsukuda Hobby / Original",
       "Welt der Spiele"
     ],
-    "id": "40"
+    "id": 40
   },
   {
     "name": "Can't Stop",
-    "year": "1980",
-    "rating": 6.877380952380953,
-    "minPlayers": "2",
-    "maxPlayers": "4",
-    "minPlaytime": "30",
-    "maxPlaytime": "30",
-    "minAge": "9",
-    "designers": ["Sid Sackson"],
+    "year": 1980,
+    "rating": 6.833734939759037,
+    "minPlayers": 2,
+    "maxPlayers": 4,
+    "minPlaytime": 30,
+    "maxPlaytime": 30,
+    "minAge": 9,
+    "designers": [
+      "Sid Sackson"
+    ],
     "artists": [
       "Heiko Günther",
       "Gabriel Laulunen (II)",
@@ -859,18 +1071,20 @@
       "Palitoy Ltd.",
       "Ravensburger Spieleverlag GmbH"
     ],
-    "id": "41"
+    "id": 41
   },
   {
     "name": "Tigris & Euphrates",
-    "year": "1997",
+    "year": 1997,
     "rating": 7.897530864197531,
-    "minPlayers": "2",
-    "maxPlayers": "4",
-    "minPlaytime": "90",
-    "maxPlaytime": "90",
-    "minAge": "12",
-    "designers": ["Reiner Knizia"],
+    "minPlayers": 2,
+    "maxPlayers": 4,
+    "minPlaytime": 90,
+    "maxPlaytime": 90,
+    "minAge": 12,
+    "designers": [
+      "Reiner Knizia"
+    ],
     "artists": [
       "Bascu",
       "Christine Conrad",
@@ -897,51 +1111,64 @@
       "Wargames Club Publishing",
       "Z-Man Games, Inc."
     ],
-    "id": "42"
+    "id": 42
   },
   {
     "name": "Airlines",
-    "year": "1990",
+    "year": 1990,
     "rating": 6.372666666666667,
-    "minPlayers": "2",
-    "maxPlayers": "6",
-    "minPlaytime": "90",
-    "maxPlaytime": "90",
-    "minAge": "12",
-    "designers": ["Alan R. Moon"],
-    "artists": ["Christian Schütte"],
-    "publishers": ["ABACUSSPIELE"],
-    "id": "43"
+    "minPlayers": 2,
+    "maxPlayers": 6,
+    "minPlaytime": 90,
+    "maxPlaytime": 90,
+    "minAge": 12,
+    "designers": [
+      "Alan R. Moon"
+    ],
+    "artists": [
+      "Christian Schütte"
+    ],
+    "publishers": [
+      "ABACUSSPIELE"
+    ],
+    "id": 43
   },
   {
     "name": "David & Goliath",
-    "year": "1997",
+    "year": 1997,
     "rating": 6.1472500000000005,
-    "minPlayers": "3",
-    "maxPlayers": "6",
-    "minPlaytime": "60",
-    "maxPlaytime": "60",
-    "minAge": "8",
-    "designers": ["Reinhard Staupe"],
-    "artists": ["Alexander Bradley", "Oliver Freudenreich"],
+    "minPlayers": 3,
+    "maxPlayers": 6,
+    "minPlaytime": 60,
+    "maxPlaytime": 60,
+    "minAge": 8,
+    "designers": [
+      "Reinhard Staupe"
+    ],
+    "artists": [
+      "Alexander Bradley",
+      "Oliver Freudenreich"
+    ],
     "publishers": [
       "Berliner Spielkarten",
       "Pegasus Spiele",
       "Playroom Entertainment",
       "Wargames Club Publishing"
     ],
-    "id": "44"
+    "id": 44
   },
   {
     "name": "Perudo",
-    "year": "1800",
-    "rating": 6.803012048192772,
-    "minPlayers": "2",
-    "maxPlayers": "6",
-    "minPlaytime": "15",
-    "maxPlaytime": "30",
-    "minAge": "8",
-    "designers": ["Richard Borg"],
+    "year": 1800,
+    "rating": 6.812048192771085,
+    "minPlayers": 2,
+    "maxPlayers": 6,
+    "minPlaytime": 15,
+    "maxPlaytime": 30,
+    "minAge": 8,
+    "designers": [
+      "Richard Borg"
+    ],
     "artists": [
       "(Uncredited)",
       "Rita Åse",
@@ -993,18 +1220,20 @@
       "University Games",
       "Walt Disney Productions"
     ],
-    "id": "45"
+    "id": 45
   },
   {
     "name": "Medici",
-    "year": "1995",
-    "rating": 7.064705882352941,
-    "minPlayers": "2",
-    "maxPlayers": "6",
-    "minPlaytime": "60",
-    "maxPlaytime": "60",
-    "minAge": "10",
-    "designers": ["Reiner Knizia"],
+    "year": 1995,
+    "rating": 7.016470588235294,
+    "minPlayers": 2,
+    "maxPlayers": 6,
+    "minPlaytime": 60,
+    "maxPlaytime": 60,
+    "minAge": 10,
+    "designers": [
+      "Reiner Knizia"
+    ],
     "artists": [
       "David Cherry",
       "Vincent Dutrait",
@@ -1020,19 +1249,24 @@
       "PaperGames (III)",
       "Rio Grande Games"
     ],
-    "id": "46"
+    "id": 46
   },
   {
     "name": "Chinatown",
-    "year": "1999",
-    "rating": 6.988023255813952,
-    "minPlayers": "3",
-    "maxPlayers": "5",
-    "minPlaytime": "60",
-    "maxPlaytime": "60",
-    "minAge": "12",
-    "designers": ["Karsten Hartwig"],
-    "artists": ["Mathieu Leyssenne", "Franz Vohwinkel"],
+    "year": 1999,
+    "rating": 6.976395348837208,
+    "minPlayers": 3,
+    "maxPlayers": 5,
+    "minPlaytime": 60,
+    "maxPlaytime": 60,
+    "minAge": 12,
+    "designers": [
+      "Karsten Hartwig"
+    ],
+    "artists": [
+      "Mathieu Leyssenne",
+      "Franz Vohwinkel"
+    ],
     "publishers": [
       "alea",
       "Ravensburger Spieleverlag GmbH",
@@ -1045,33 +1279,45 @@
       "Siam Board Games",
       "Z-Man Games, Inc."
     ],
-    "id": "47"
+    "id": 47
   },
   {
     "name": "Krieg und Frieden",
-    "year": "1999",
-    "rating": 6.093939393939394,
-    "minPlayers": "2",
-    "maxPlayers": "4",
-    "minPlaytime": "90",
-    "maxPlaytime": "90",
-    "minAge": "12",
-    "designers": ["Gerard Mulder"],
-    "artists": ["Franz Vohwinkel"],
-    "publishers": ["999 Games", "La Tana dei Goblin", "TM Spiele"],
-    "id": "48"
+    "year": 1999,
+    "rating": 6.107462686567164,
+    "minPlayers": 2,
+    "maxPlayers": 4,
+    "minPlaytime": 90,
+    "maxPlaytime": 90,
+    "minAge": 12,
+    "designers": [
+      "Gerard Mulder"
+    ],
+    "artists": [
+      "Franz Vohwinkel"
+    ],
+    "publishers": [
+      "999 Games",
+      "La Tana dei Goblin",
+      "TM Spiele"
+    ],
+    "id": 48
   },
   {
     "name": "Mamma Mia!",
-    "year": "1998",
-    "rating": 6.274642857142856,
-    "minPlayers": "2",
-    "maxPlayers": "5",
-    "minPlaytime": "30",
-    "maxPlaytime": "30",
-    "minAge": "10",
-    "designers": ["Uwe Rosenberg"],
-    "artists": ["Franz Vohwinkel"],
+    "year": 1998,
+    "rating": 6.289999999999999,
+    "minPlayers": 2,
+    "maxPlayers": 5,
+    "minPlaytime": 30,
+    "maxPlaytime": 30,
+    "minAge": 10,
+    "designers": [
+      "Uwe Rosenberg"
+    ],
+    "artists": [
+      "Franz Vohwinkel"
+    ],
     "publishers": [
       "ABACUSSPIELE",
       "Brain Games",
@@ -1090,18 +1336,20 @@
       "Swan Panasia Co., Ltd.",
       "Vennerød Forlag AS"
     ],
-    "id": "49"
+    "id": 49
   },
   {
     "name": "Lost Cities",
-    "year": "1999",
-    "rating": 7.242613636363637,
-    "minPlayers": "2",
-    "maxPlayers": "2",
-    "minPlaytime": "30",
-    "maxPlaytime": "30",
-    "minAge": "10",
-    "designers": ["Reiner Knizia"],
+    "year": 1999,
+    "rating": 7.251123595505618,
+    "minPlayers": 2,
+    "maxPlayers": 2,
+    "minPlaytime": 30,
+    "maxPlaytime": 30,
+    "minAge": 10,
+    "designers": [
+      "Reiner Knizia"
+    ],
     "artists": [
       "Vincent Dutrait",
       "Michaela Kienle",
@@ -1132,19 +1380,23 @@
       "Tilsit",
       "Zvezda"
     ],
-    "id": "50"
+    "id": 50
   },
   {
     "name": "Ricochet Robots",
-    "year": "1999",
+    "year": 1999,
     "rating": 7.176744186046512,
-    "minPlayers": "1",
-    "maxPlayers": "99",
-    "minPlaytime": "30",
-    "maxPlaytime": "30",
-    "minAge": "10",
-    "designers": ["Alex Randolph"],
-    "artists": ["Franz Vohwinkel"],
+    "minPlayers": 1,
+    "maxPlayers": 99,
+    "minPlaytime": 30,
+    "maxPlaytime": 30,
+    "minAge": 10,
+    "designers": [
+      "Alex Randolph"
+    ],
+    "artists": [
+      "Franz Vohwinkel"
+    ],
     "publishers": [
       "Hans im Glück",
       "ABACUSSPIELE",
@@ -1157,18 +1409,21 @@
       "Swan Panasia Co., Ltd.",
       "Z-Man Games, Inc."
     ],
-    "id": "51"
+    "id": 51
   },
   {
     "name": "Mighty Empires",
-    "year": "1990",
-    "rating": 5.709090909090909,
-    "minPlayers": "2",
-    "maxPlayers": "3",
-    "minPlaytime": "300",
-    "maxPlaytime": "300",
-    "minAge": "14",
-    "designers": ["Rick Priestley", "Nigel Stillman"],
+    "year": 1990,
+    "rating": 5.712820512820513,
+    "minPlayers": 2,
+    "maxPlayers": 3,
+    "minPlaytime": 300,
+    "maxPlaytime": 300,
+    "minAge": 14,
+    "designers": [
+      "Rick Priestley",
+      "Nigel Stillman"
+    ],
     "artists": [
       "Tony Ackland",
       "Albrecht Altdorfer",
@@ -1182,33 +1437,42 @@
       "Stephen Tappin",
       "Kevin Walker"
     ],
-    "publishers": ["Games Workshop Ltd."],
-    "id": "52"
+    "publishers": [
+      "Games Workshop Ltd."
+    ],
+    "id": 52
   },
   {
     "name": "Brauerei",
-    "year": "1996",
+    "year": 1996,
     "rating": 6.5,
-    "minPlayers": "3",
-    "maxPlayers": "6",
-    "minPlaytime": "0",
-    "maxPlaytime": "0",
-    "minAge": "14",
-    "designers": ["Valentin Herman"],
+    "minPlayers": 3,
+    "maxPlayers": 6,
+    "minPlaytime": 0,
+    "maxPlaytime": 0,
+    "minAge": 14,
+    "designers": [
+      "Valentin Herman"
+    ],
     "artists": [],
-    "publishers": ["Fanfor-Verlag"],
-    "id": "53"
+    "publishers": [
+      "Fanfor-Verlag"
+    ],
+    "id": 53
   },
   {
     "name": "Tikal",
-    "year": "1999",
-    "rating": 7.35,
-    "minPlayers": "2",
-    "maxPlayers": "4",
-    "minPlaytime": "90",
-    "maxPlaytime": "90",
-    "minAge": "10",
-    "designers": ["Michael Kiesling", "Wolfgang Kramer"],
+    "year": 1999,
+    "rating": 7.356410256410256,
+    "minPlayers": 2,
+    "maxPlayers": 4,
+    "minPlaytime": 90,
+    "maxPlaytime": 90,
+    "minAge": 10,
+    "designers": [
+      "Michael Kiesling",
+      "Wolfgang Kramer"
+    ],
     "artists": [
       "Mariusz Gandzel",
       "Paul Mafayon",
@@ -1229,46 +1493,67 @@
       "YOKA Games",
       "Zvezda"
     ],
-    "id": "54"
+    "id": 54
   },
   {
     "name": "Sophie's World",
-    "year": "1998",
+    "year": 1998,
     "rating": 4.613043478260869,
-    "minPlayers": "2",
-    "maxPlayers": "6",
-    "minPlaytime": "60",
-    "maxPlaytime": "90",
-    "minAge": "12",
-    "designers": ["Ken Howard", "Robert Hyde"],
-    "artists": ["Sarah Perkins"],
-    "publishers": ["KOSMOS", "Orion", "Pontaccio", "Sophisticated Games"],
-    "id": "55"
+    "minPlayers": 2,
+    "maxPlayers": 6,
+    "minPlaytime": 60,
+    "maxPlaytime": 90,
+    "minAge": 12,
+    "designers": [
+      "Ken Howard",
+      "Robert Hyde"
+    ],
+    "artists": [
+      "Sarah Perkins"
+    ],
+    "publishers": [
+      "KOSMOS",
+      "Orion",
+      "Pontaccio",
+      "Sophisticated Games"
+    ],
+    "id": 55
   },
   {
     "name": "Schoko & Co.",
-    "year": "1987",
-    "rating": 6.573571428571428,
-    "minPlayers": "2",
-    "maxPlayers": "4",
-    "minPlaytime": "180",
-    "maxPlaytime": "180",
-    "minAge": "13",
-    "designers": ["Yves Hirschfeld", "Gilles Monnet"],
-    "artists": ["(Uncredited)"],
-    "publishers": ["Schmidt Spiele"],
-    "id": "57"
+    "year": 1987,
+    "rating": 6.581884057971014,
+    "minPlayers": 2,
+    "maxPlayers": 4,
+    "minPlaytime": 180,
+    "maxPlaytime": 180,
+    "minAge": 13,
+    "designers": [
+      "Yves Hirschfeld",
+      "Gilles Monnet"
+    ],
+    "artists": [
+      "(Uncredited)"
+    ],
+    "publishers": [
+      "Schmidt Spiele"
+    ],
+    "id": 57
   },
   {
     "name": "Kings & Things",
-    "year": "1986",
+    "year": 1986,
     "rating": 6.866417910447761,
-    "minPlayers": "2",
-    "maxPlayers": "4",
-    "minPlaytime": "120",
-    "maxPlaytime": "120",
-    "minAge": "12",
-    "designers": ["Doug Kaufman", "Robert J. Kuntz", "Tom Wham"],
+    "minPlayers": 2,
+    "maxPlayers": 4,
+    "minPlaytime": 120,
+    "maxPlaytime": 120,
+    "minAge": 12,
+    "designers": [
+      "Doug Kaufman",
+      "Robert J. Kuntz",
+      "Tom Wham"
+    ],
     "artists": [
       "Ray-Mel Cornelius",
       "Charles Elliot (I)",
@@ -1289,60 +1574,81 @@
       "West End Games",
       "Z-Man Games, Inc."
     ],
-    "id": "58"
+    "id": 58
   },
   {
     "name": "Giganten",
-    "year": "1999",
+    "year": 1999,
     "rating": 6.686419753086419,
-    "minPlayers": "3",
-    "maxPlayers": "4",
-    "minPlaytime": "90",
-    "maxPlaytime": "90",
-    "minAge": "10",
-    "designers": ["Wilko Manz"],
-    "artists": ["Franz Vohwinkel"],
-    "publishers": ["KOSMOS"],
-    "id": "59"
+    "minPlayers": 3,
+    "maxPlayers": 4,
+    "minPlaytime": 90,
+    "maxPlaytime": 90,
+    "minAge": 10,
+    "designers": [
+      "Wilko Manz"
+    ],
+    "artists": [
+      "Franz Vohwinkel"
+    ],
+    "publishers": [
+      "KOSMOS"
+    ],
+    "id": 59
   },
   {
     "name": "Vinci",
-    "year": "1999",
+    "year": 1999,
     "rating": 7.055882352941176,
-    "minPlayers": "3",
-    "maxPlayers": "6",
-    "minPlaytime": "90",
-    "maxPlaytime": "90",
-    "minAge": "14",
-    "designers": ["Philippe Keyaerts"],
-    "artists": ["Cyril Saint Blancat"],
-    "publishers": ["Descartes Editeur"],
-    "id": "60"
+    "minPlayers": 3,
+    "maxPlayers": 6,
+    "minPlaytime": 90,
+    "maxPlaytime": 90,
+    "minAge": 14,
+    "designers": [
+      "Philippe Keyaerts"
+    ],
+    "artists": [
+      "Cyril Saint Blancat"
+    ],
+    "publishers": [
+      "Descartes Editeur"
+    ],
+    "id": 60
   },
   {
     "name": "Fossil",
-    "year": "1998",
+    "year": 1998,
     "rating": 5.173809523809524,
-    "minPlayers": "2",
-    "maxPlayers": "6",
-    "minPlaytime": "40",
-    "maxPlaytime": "40",
-    "minAge": "10",
-    "designers": ["Klaus Palesch"],
-    "artists": ["Franz Vohwinkel"],
-    "publishers": ["Goldsieber Spiele", "Rio Grande Games"],
-    "id": "61"
+    "minPlayers": 2,
+    "maxPlayers": 6,
+    "minPlaytime": 40,
+    "maxPlaytime": 40,
+    "minAge": 10,
+    "designers": [
+      "Klaus Palesch"
+    ],
+    "artists": [
+      "Franz Vohwinkel"
+    ],
+    "publishers": [
+      "Goldsieber Spiele",
+      "Rio Grande Games"
+    ],
+    "id": 61
   },
   {
     "name": "Curse of the Mummy's Tomb",
-    "year": "1988",
+    "year": 1988,
     "rating": 4.962837837837838,
-    "minPlayers": "1",
-    "maxPlayers": "4",
-    "minPlaytime": "120",
-    "maxPlaytime": "120",
-    "minAge": "12",
-    "designers": ["Stephen Hand"],
+    "minPlayers": 1,
+    "maxPlayers": 4,
+    "minPlaytime": 120,
+    "maxPlaytime": 120,
+    "minAge": 12,
+    "designers": [
+      "Stephen Hand"
+    ],
     "artists": [
       "Dave Andrews",
       "Gary Chalk",
@@ -1350,76 +1656,113 @@
       "Aly Morrison",
       "James Warhola"
     ],
-    "publishers": ["Games Workshop Ltd.", "Sfera"],
-    "id": "62"
+    "publishers": [
+      "Games Workshop Ltd.",
+      "Sfera"
+    ],
+    "id": 62
   },
   {
     "name": "Samurai",
-    "year": "1979",
+    "year": 1979,
     "rating": 6.300793650793651,
-    "minPlayers": "2",
-    "maxPlayers": "8",
-    "minPlaytime": "180",
-    "maxPlaytime": "180",
-    "minAge": "12",
-    "designers": ["Dan Campagna"],
-    "artists": ["Steve Burnett", "Arnold Hendrick"],
-    "publishers": ["The Avalon Hill Game Co", "Battleline"],
-    "id": "63"
+    "minPlayers": 2,
+    "maxPlayers": 8,
+    "minPlaytime": 180,
+    "maxPlaytime": 180,
+    "minAge": 12,
+    "designers": [
+      "Dan Campagna"
+    ],
+    "artists": [
+      "Steve Burnett",
+      "Arnold Hendrick"
+    ],
+    "publishers": [
+      "The Avalon Hill Game Co",
+      "Battleline"
+    ],
+    "id": 63
   },
   {
     "name": "Joan of Arc",
-    "year": "1998",
+    "year": 1998,
     "rating": 6.0375000000000005,
-    "minPlayers": "3",
-    "maxPlayers": "6",
-    "minPlaytime": "180",
-    "maxPlaytime": "180",
-    "minAge": "12",
-    "designers": ["Pascal Bernard"],
-    "artists": ["Thibaud Béghin", "Greg Cervall"],
-    "publishers": ["Clash of Arms Games", "Tilsit", "Truant Spiele"],
-    "id": "64"
+    "minPlayers": 3,
+    "maxPlayers": 6,
+    "minPlaytime": 180,
+    "maxPlaytime": 180,
+    "minAge": 12,
+    "designers": [
+      "Pascal Bernard"
+    ],
+    "artists": [
+      "Thibaud Béghin",
+      "Greg Cervall"
+    ],
+    "publishers": [
+      "Clash of Arms Games",
+      "Tilsit",
+      "Truant Spiele"
+    ],
+    "id": 64
   },
   {
     "name": "The Garden Game",
-    "year": "1996",
+    "year": 1996,
     "rating": 3.7,
-    "minPlayers": "2",
-    "maxPlayers": "6",
-    "minPlaytime": "30",
-    "maxPlaytime": "30",
-    "minAge": "8",
-    "designers": ["Amy Mook"],
-    "artists": ["Erica Thurston"],
-    "publishers": ["Ampersand Press"],
-    "id": "65"
+    "minPlayers": 2,
+    "maxPlayers": 6,
+    "minPlaytime": 30,
+    "maxPlaytime": 30,
+    "minAge": 8,
+    "designers": [
+      "Amy Mook"
+    ],
+    "artists": [
+      "Erica Thurston"
+    ],
+    "publishers": [
+      "Ampersand Press"
+    ],
+    "id": 65
   },
   {
     "name": "Löwenherz",
-    "year": "1997",
-    "rating": 7.200694444444443,
-    "minPlayers": "2",
-    "maxPlayers": "4",
-    "minPlaytime": "90",
-    "maxPlaytime": "90",
-    "minAge": "12",
-    "designers": ["Klaus Teuber"],
-    "artists": ["Andreas Steiner"],
-    "publishers": ["Goldsieber Spiele", "Rio Grande Games"],
-    "id": "66"
+    "year": 1997,
+    "rating": 7.203521126760562,
+    "minPlayers": 2,
+    "maxPlayers": 4,
+    "minPlaytime": 90,
+    "maxPlaytime": 90,
+    "minAge": 12,
+    "designers": [
+      "Klaus Teuber"
+    ],
+    "artists": [
+      "Andreas Steiner"
+    ],
+    "publishers": [
+      "Goldsieber Spiele",
+      "Rio Grande Games"
+    ],
+    "id": 66
   },
   {
     "name": "Conquest",
-    "year": "1974",
-    "rating": 6.0796875,
-    "minPlayers": "2",
-    "maxPlayers": "4",
-    "minPlaytime": "120",
-    "maxPlaytime": "120",
-    "minAge": "10",
-    "designers": ["Donald Benge"],
-    "artists": ["Donald Benge"],
+    "year": 1974,
+    "rating": 6.065079365079366,
+    "minPlayers": 2,
+    "maxPlayers": 4,
+    "minPlaytime": 120,
+    "maxPlaytime": 120,
+    "minAge": 10,
+    "designers": [
+      "Donald Benge"
+    ],
+    "artists": [
+      "Donald Benge"
+    ],
     "publishers": [
       "(Self-Published)",
       "Bütehorn Spiele",
@@ -1427,60 +1770,85 @@
       "Numbskull Games",
       "Quest Games"
     ],
-    "id": "67"
+    "id": 67
   },
   {
-    "name": "Successors (second edition)",
-    "year": "1997",
+    "name": "Successors (Second Edition)",
+    "year": 1997,
     "rating": 7.03661957746479,
-    "minPlayers": "2",
-    "maxPlayers": "4",
-    "minPlaytime": "180",
-    "maxPlaytime": "180",
-    "minAge": "12",
-    "designers": ["Richard H. Berg", "Mark Simonitch"],
-    "artists": ["Kurt Miller", "Patrick O'Brien", "Mark Simonitch"],
-    "publishers": ["The Avalon Hill Game Co", "Wydawnictwo Gołębiewski"],
-    "id": "68"
+    "minPlayers": 2,
+    "maxPlayers": 4,
+    "minPlaytime": 180,
+    "maxPlaytime": 180,
+    "minAge": 12,
+    "designers": [
+      "Richard H. Berg",
+      "Mark Simonitch"
+    ],
+    "artists": [
+      "Kurt Miller",
+      "Patrick O'Brien",
+      "Mark Simonitch"
+    ],
+    "publishers": [
+      "The Avalon Hill Game Co",
+      "Wydawnictwo Gołębiewski"
+    ],
+    "id": 68
   },
   {
     "name": "Bollox",
-    "year": "1999",
+    "year": 1999,
     "rating": 6.45,
-    "minPlayers": "2",
-    "maxPlayers": "2",
-    "minPlaytime": "20",
-    "maxPlaytime": "20",
-    "minAge": "10",
-    "designers": ["Rob Nelson"],
+    "minPlayers": 2,
+    "maxPlayers": 2,
+    "minPlaytime": 20,
+    "maxPlaytime": 20,
+    "minAge": 10,
+    "designers": [
+      "Rob Nelson"
+    ],
     "artists": [],
-    "publishers": ["Cadaco", "The London Game Company LTD"],
-    "id": "69"
+    "publishers": [
+      "Cadaco",
+      "The London Game Company LTD"
+    ],
+    "id": 69
   },
   {
     "name": "Big City",
-    "year": "1999",
-    "rating": 7.020731707317074,
-    "minPlayers": "2",
-    "maxPlayers": "5",
-    "minPlaytime": "60",
-    "maxPlaytime": "60",
-    "minAge": "10",
-    "designers": ["Franz-Benno Delonge"],
-    "artists": ["Franz Vohwinkel"],
-    "publishers": ["Goldsieber Spiele", "999 Games", "Rio Grande Games"],
-    "id": "70"
+    "year": 1999,
+    "rating": 7.020987654320988,
+    "minPlayers": 2,
+    "maxPlayers": 5,
+    "minPlaytime": 60,
+    "maxPlaytime": 60,
+    "minAge": 10,
+    "designers": [
+      "Franz-Benno Delonge"
+    ],
+    "artists": [
+      "Franz Vohwinkel"
+    ],
+    "publishers": [
+      "Goldsieber Spiele",
+      "999 Games",
+      "Rio Grande Games"
+    ],
+    "id": 70
   },
   {
     "name": "Civilization",
-    "year": "1980",
-    "rating": 7.648666666666666,
-    "minPlayers": "2",
-    "maxPlayers": "7",
-    "minPlaytime": "360",
-    "maxPlaytime": "360",
-    "minAge": "12",
-    "designers": ["Francis Tresham"],
+    "year": 1980,
+    "rating": 7.611643835616438,
+    "minPlayers": 2,
+    "maxPlayers": 7,
+    "minPlaytime": 360,
+    "maxPlaytime": 360,
+    "minAge": 12,
+    "designers": [
+      "Francis Tresham"
+    ],
     "artists": [
       "Ed Dovey",
       "Charles Kibler",
@@ -1500,47 +1868,68 @@
       "Spiel & Kunst",
       "Welt der Spiele"
     ],
-    "id": "71"
+    "id": 71
   },
   {
     "name": "Verräter",
-    "year": "1998",
-    "rating": 6.953030303030303,
-    "minPlayers": "3",
-    "maxPlayers": "4",
-    "minPlaytime": "60",
-    "maxPlaytime": "60",
-    "minAge": "12",
-    "designers": ["Marcel-André Casasola Merkle"],
-    "artists": ["Marcel-André Casasola Merkle"],
-    "publishers": ["Adlung-Spiele", "New Games Order, LLC"],
-    "id": "72"
+    "year": 1998,
+    "rating": 6.936923076923077,
+    "minPlayers": 3,
+    "maxPlayers": 4,
+    "minPlaytime": 60,
+    "maxPlaytime": 60,
+    "minAge": 12,
+    "designers": [
+      "Marcel-André Casasola Merkle"
+    ],
+    "artists": [
+      "Marcel-André Casasola Merkle"
+    ],
+    "publishers": [
+      "Adlung-Spiele",
+      "New Games Order, LLC"
+    ],
+    "id": 72
   },
   {
     "name": "Show Manager",
-    "year": "1996",
+    "year": 1996,
     "rating": 7.046075949367088,
-    "minPlayers": "2",
-    "maxPlayers": "6",
-    "minPlaytime": "60",
-    "maxPlaytime": "60",
-    "minAge": "10",
-    "designers": ["Dirk Henn"],
-    "artists": ["Jo Hartwig", "Reinhard Horst", "Oliver Schlemmer"],
-    "publishers": ["Queen Games", "db-Spiele"],
-    "id": "73"
+    "minPlayers": 2,
+    "maxPlayers": 6,
+    "minPlaytime": 60,
+    "maxPlaytime": 60,
+    "minAge": 10,
+    "designers": [
+      "Dirk Henn"
+    ],
+    "artists": [
+      "Jo Hartwig",
+      "Reinhard Horst",
+      "Oliver Schlemmer"
+    ],
+    "publishers": [
+      "Queen Games",
+      "db-Spiele"
+    ],
+    "id": 73
   },
   {
     "name": "Apples to Apples",
-    "year": "1999",
+    "year": 1999,
     "rating": 5.770689655172414,
-    "minPlayers": "4",
-    "maxPlayers": "10",
-    "minPlaytime": "30",
-    "maxPlaytime": "30",
-    "minAge": "12",
-    "designers": ["Matthew Kirby", "Mark Alan Osterhaus"],
-    "artists": ["John Kovalic"],
+    "minPlayers": 4,
+    "maxPlayers": 10,
+    "minPlaytime": 30,
+    "maxPlaytime": 30,
+    "minAge": 12,
+    "designers": [
+      "Matthew Kirby",
+      "Mark Alan Osterhaus"
+    ],
+    "artists": [
+      "John Kovalic"
+    ],
     "publishers": [
       "Beverly Enterprises, Inc.",
       "Excalibur Electronics",
@@ -1550,192 +1939,279 @@
       "Pegasus Spiele",
       "Tactic"
     ],
-    "id": "74"
+    "id": 74
   },
   {
     "name": "Falling",
-    "year": "1998",
+    "year": 1998,
     "rating": 5.084415584415584,
-    "minPlayers": "4",
-    "maxPlayers": "8",
-    "minPlaytime": "5",
-    "maxPlaytime": "5",
-    "minAge": "8",
-    "designers": ["James Ernest"],
-    "artists": ["James Ernest", "Val Mayerik", "Drew Pocza", "Brian Snoddy"],
+    "minPlayers": 4,
+    "maxPlayers": 8,
+    "minPlaytime": 5,
+    "maxPlaytime": 5,
+    "minAge": 8,
+    "designers": [
+      "James Ernest"
+    ],
+    "artists": [
+      "James Ernest",
+      "Val Mayerik",
+      "Drew Pocza",
+      "Brian Snoddy"
+    ],
     "publishers": [
       "Cheapass Games",
       "Paizo Publishing",
       "Portal Games",
       "Titanic Games"
     ],
-    "id": "75"
+    "id": 75
   },
   {
     "name": "Air Baron",
-    "year": "1996",
+    "year": 1996,
     "rating": 6.104545454545455,
-    "minPlayers": "2",
-    "maxPlayers": "6",
-    "minPlaytime": "120",
-    "maxPlaytime": "120",
-    "minAge": "10",
-    "designers": ["Evan Davis (I)"],
-    "artists": ["Kurt Miller", "Mark Simonitch"],
-    "publishers": ["The Avalon Hill Game Co"],
-    "id": "76"
+    "minPlayers": 2,
+    "maxPlayers": 6,
+    "minPlaytime": 120,
+    "maxPlaytime": 120,
+    "minAge": 10,
+    "designers": [
+      "Evan Davis (I)"
+    ],
+    "artists": [
+      "Kurt Miller",
+      "Mark Simonitch"
+    ],
+    "publishers": [
+      "The Avalon Hill Game Co"
+    ],
+    "id": 76
   },
   {
-    "name": "EastFront",
-    "year": "1991",
-    "rating": 8.057971014492754,
-    "minPlayers": "2",
-    "maxPlayers": "2",
-    "minPlaytime": "240",
-    "maxPlaytime": "240",
-    "minAge": "12",
-    "designers": ["Craig Besinque", "Tom Dalgliesh"],
-    "artists": ["Eric Hotz"],
-    "publishers": ["Columbia Games"],
-    "id": "77"
+    "name": "EastFront: The War in Russia, 1941-45",
+    "year": 1991,
+    "rating": 8.070422535211268,
+    "minPlayers": 2,
+    "maxPlayers": 2,
+    "minPlaytime": 240,
+    "maxPlaytime": 240,
+    "minAge": 12,
+    "designers": [
+      "Craig Besinque",
+      "Tom Dalgliesh"
+    ],
+    "artists": [
+      "Eric Hotz"
+    ],
+    "publishers": [
+      "Columbia Games"
+    ],
+    "id": 77
   },
   {
-    "name": "WestFront",
-    "year": "1992",
+    "name": "WestFront: The War in Europe, 1943-45",
+    "year": 1992,
     "rating": 6.983333333333333,
-    "minPlayers": "2",
-    "maxPlayers": "2",
-    "minPlaytime": "240",
-    "maxPlaytime": "240",
-    "minAge": "12",
-    "designers": ["Craig Besinque"],
-    "artists": ["Eric Hotz"],
-    "publishers": ["Columbia Games"],
-    "id": "78"
+    "minPlayers": 2,
+    "maxPlayers": 2,
+    "minPlaytime": 240,
+    "maxPlaytime": 240,
+    "minAge": 12,
+    "designers": [
+      "Craig Besinque"
+    ],
+    "artists": [
+      "Eric Hotz"
+    ],
+    "publishers": [
+      "Columbia Games"
+    ],
+    "id": 78
   },
   {
-    "name": "MedFront",
-    "year": "1994",
+    "name": "MedFront: War in North Africa 1940-43",
+    "year": 1994,
     "rating": 6.2870967741935475,
-    "minPlayers": "2",
-    "maxPlayers": "2",
-    "minPlaytime": "180",
-    "maxPlaytime": "180",
-    "minAge": "12",
-    "designers": ["Craig Besinque"],
+    "minPlayers": 2,
+    "maxPlayers": 2,
+    "minPlaytime": 180,
+    "maxPlaytime": 180,
+    "minAge": 12,
+    "designers": [
+      "Craig Besinque"
+    ],
     "artists": [],
-    "publishers": ["Columbia Games"],
-    "id": "79"
+    "publishers": [
+      "Columbia Games"
+    ],
+    "id": 79
   },
   {
-    "name": "VolgaFront",
-    "year": "1994",
+    "name": "VolgaFront: East of EastFront 1942-43",
+    "year": 1994,
     "rating": 7.833333333333333,
-    "minPlayers": "2",
-    "maxPlayers": "2",
-    "minPlaytime": "240",
-    "maxPlaytime": "240",
-    "minAge": "12",
-    "designers": ["Tim Taylor"],
-    "artists": ["Eric Hotz"],
-    "publishers": ["Columbia Games"],
-    "id": "80"
+    "minPlayers": 2,
+    "maxPlayers": 2,
+    "minPlaytime": 240,
+    "maxPlaytime": 240,
+    "minAge": 12,
+    "designers": [
+      "Tim Taylor"
+    ],
+    "artists": [
+      "Eric Hotz"
+    ],
+    "publishers": [
+      "Columbia Games"
+    ],
+    "id": 80
   },
   {
-    "name": "EuroFront",
-    "year": "1995",
+    "name": "EuroFront: War in Europe, 1939-45",
+    "year": 1995,
     "rating": 7.293103448275862,
-    "minPlayers": "2",
-    "maxPlayers": "6",
-    "minPlaytime": "600",
-    "maxPlaytime": "600",
-    "minAge": "12",
-    "designers": ["Craig Besinque"],
-    "artists": ["Eric Hotz"],
-    "publishers": ["Columbia Games"],
-    "id": "81"
+    "minPlayers": 2,
+    "maxPlayers": 6,
+    "minPlaytime": 600,
+    "maxPlaytime": 600,
+    "minAge": 12,
+    "designers": [
+      "Craig Besinque"
+    ],
+    "artists": [
+      "Eric Hotz"
+    ],
+    "publishers": [
+      "Columbia Games"
+    ],
+    "id": 81
   },
   {
-    "name": "Bobby Lee",
-    "year": "1993",
-    "rating": 6.866101694915255,
-    "minPlayers": "2",
-    "maxPlayers": "2",
-    "minPlaytime": "240",
-    "maxPlaytime": "240",
-    "minAge": "12",
-    "designers": ["Tom Dalgliesh"],
-    "artists": ["Eric Hotz"],
-    "publishers": ["Columbia Games"],
-    "id": "82"
+    "name": "Bobby Lee: The Civil War in Virginia 1861-1865",
+    "year": 1993,
+    "rating": 6.901666666666667,
+    "minPlayers": 2,
+    "maxPlayers": 2,
+    "minPlaytime": 240,
+    "maxPlaytime": 240,
+    "minAge": 12,
+    "designers": [
+      "Tom Dalgliesh"
+    ],
+    "artists": [
+      "Eric Hotz"
+    ],
+    "publishers": [
+      "Columbia Games"
+    ],
+    "id": 82
   },
   {
-    "name": "Sam Grant",
-    "year": "1997",
-    "rating": 6.132432432432433,
-    "minPlayers": "2",
-    "maxPlayers": "2",
-    "minPlaytime": "180",
-    "maxPlaytime": "180",
-    "minAge": "12",
-    "designers": ["Tom Dalgliesh", "Gary Selkirk"],
-    "artists": ["Eric Hotz"],
-    "publishers": ["Columbia Games"],
-    "id": "83"
+    "name": "Sam Grant: The Civil War in the West 1862-1864",
+    "year": 1997,
+    "rating": 6.155263157894737,
+    "minPlayers": 2,
+    "maxPlayers": 2,
+    "minPlaytime": 180,
+    "maxPlaytime": 180,
+    "minAge": 12,
+    "designers": [
+      "Tom Dalgliesh",
+      "Gary Selkirk"
+    ],
+    "artists": [
+      "Eric Hotz"
+    ],
+    "publishers": [
+      "Columbia Games"
+    ],
+    "id": 83
   },
   {
     "name": "Rommel in the Desert",
-    "year": "1982",
-    "rating": 7.875,
-    "minPlayers": "2",
-    "maxPlayers": "2",
-    "minPlaytime": "150",
-    "maxPlaytime": "150",
-    "minAge": "12",
-    "designers": ["Craig Besinque"],
-    "artists": ["Ron Gibson", "Jody Harmon", "Eric Hotz"],
-    "publishers": ["Columbia Games", "Game Preserve"],
-    "id": "84"
+    "year": 1982,
+    "rating": 7.889285714285714,
+    "minPlayers": 2,
+    "maxPlayers": 2,
+    "minPlaytime": 150,
+    "maxPlaytime": 150,
+    "minAge": 12,
+    "designers": [
+      "Craig Besinque"
+    ],
+    "artists": [
+      "Ron Gibson",
+      "Jody Harmon",
+      "Eric Hotz"
+    ],
+    "publishers": [
+      "Columbia Games",
+      "Game Preserve"
+    ],
+    "id": 84
   },
   {
     "name": "Quebec 1759",
-    "year": "1972",
+    "year": 1972,
     "rating": 6.959487179487178,
-    "minPlayers": "2",
-    "maxPlayers": "2",
-    "minPlaytime": "60",
-    "maxPlaytime": "60",
-    "minAge": "12",
-    "designers": ["Steve Brewster", "Tom Dalgliesh", "Lance Gutteridge"],
+    "minPlayers": 2,
+    "maxPlayers": 2,
+    "minPlaytime": 60,
+    "maxPlaytime": 60,
+    "minAge": 12,
+    "designers": [
+      "Steve Brewster",
+      "Tom Dalgliesh",
+      "Lance Gutteridge"
+    ],
     "artists": [],
-    "publishers": ["Columbia Games", "Gamma Two Games"],
-    "id": "85"
+    "publishers": [
+      "Columbia Games",
+      "Gamma Two Games"
+    ],
+    "id": 85
   },
   {
     "name": "Victory: World War II",
-    "year": "1998",
+    "year": 1998,
     "rating": 6.167095238095238,
-    "minPlayers": "2",
-    "maxPlayers": "4",
-    "minPlaytime": "120",
-    "maxPlaytime": "120",
-    "minAge": "12",
-    "designers": ["Tom Dalgliesh", "Grant Dalgliesh"],
-    "artists": ["Eric Hotz"],
-    "publishers": ["Columbia Games", "Tilsit"],
-    "id": "87"
+    "minPlayers": 2,
+    "maxPlayers": 4,
+    "minPlaytime": 120,
+    "maxPlaytime": 120,
+    "minAge": 12,
+    "designers": [
+      "Tom Dalgliesh",
+      "Grant Dalgliesh"
+    ],
+    "artists": [
+      "Eric Hotz"
+    ],
+    "publishers": [
+      "Columbia Games",
+      "Tilsit"
+    ],
+    "id": 87
   },
   {
     "name": "Torres",
-    "year": "1999",
+    "year": 1999,
     "rating": 7.149404761904761,
-    "minPlayers": "2",
-    "maxPlayers": "4",
-    "minPlaytime": "60",
-    "maxPlaytime": "60",
-    "minAge": "12",
-    "designers": ["Michael Kiesling", "Wolfgang Kramer"],
-    "artists": ["Alessandra Cimatoribus", "Michael Menzel", "Franz Vohwinkel"],
+    "minPlayers": 2,
+    "maxPlayers": 4,
+    "minPlaytime": 60,
+    "maxPlaytime": 60,
+    "minAge": 12,
+    "designers": [
+      "Michael Kiesling",
+      "Wolfgang Kramer"
+    ],
+    "artists": [
+      "Alessandra Cimatoribus",
+      "Michael Menzel",
+      "Franz Vohwinkel"
+    ],
     "publishers": [
       "F.X. Schmid",
       "ABACUSSPIELE",
@@ -1748,46 +2224,61 @@
       "Tilsit",
       "White Goblin Games"
     ],
-    "id": "88"
+    "id": 88
   },
   {
     "name": "Blue vs. Gray",
-    "year": "1999",
-    "rating": 6.874242424242424,
-    "minPlayers": "2",
-    "maxPlayers": "4",
-    "minPlaytime": "120",
-    "maxPlaytime": "120",
-    "minAge": "12",
-    "designers": ["Evan Jones"],
-    "artists": ["Rodger B. MacGowan", "Mark Simonitch"],
-    "publishers": ["GMT Games", "QED Games"],
-    "id": "89"
+    "year": 1999,
+    "rating": 6.934848484848485,
+    "minPlayers": 2,
+    "maxPlayers": 4,
+    "minPlaytime": 120,
+    "maxPlaytime": 120,
+    "minAge": 12,
+    "designers": [
+      "Evan Jones"
+    ],
+    "artists": [
+      "Rodger B. MacGowan",
+      "Mark Simonitch"
+    ],
+    "publishers": [
+      "GMT Games",
+      "QED Games"
+    ],
+    "id": 89
   },
   {
     "name": "Star Wars: Episode 1 – Clash of the Lightsabers",
-    "year": "1999",
+    "year": 1999,
     "rating": 6.123529411764705,
-    "minPlayers": "2",
-    "maxPlayers": "2",
-    "minPlaytime": "20",
-    "maxPlaytime": "20",
-    "minAge": "8",
-    "designers": ["Craig Van Ness"],
+    "minPlayers": 2,
+    "maxPlayers": 2,
+    "minPlaytime": 20,
+    "maxPlaytime": 20,
+    "minAge": 8,
+    "designers": [
+      "Craig Van Ness"
+    ],
     "artists": [],
-    "publishers": ["Hasbro", "Milton Bradley"],
-    "id": "90"
+    "publishers": [
+      "Hasbro",
+      "Milton Bradley"
+    ],
+    "id": 90
   },
   {
     "name": "Paths of Glory",
-    "year": "1999",
-    "rating": 8.131250000000001,
-    "minPlayers": "2",
-    "maxPlayers": "2",
-    "minPlaytime": "480",
-    "maxPlaytime": "480",
-    "minAge": "14",
-    "designers": ["Ted Raicer"],
+    "year": 1999,
+    "rating": 8.14718309859155,
+    "minPlayers": 2,
+    "maxPlayers": 2,
+    "minPlaytime": 480,
+    "maxPlaytime": 480,
+    "minAge": 14,
+    "designers": [
+      "Ted Raicer"
+    ],
     "artists": [
       "Charles Kibler",
       "Terry Leeds",
@@ -1802,19 +2293,24 @@
       "Wargames Club Publishing",
       "Wydawnictwo Gołębiewski"
     ],
-    "id": "91"
+    "id": 91
   },
   {
     "name": "El Grande",
-    "year": "1995",
-    "rating": 7.942941176470588,
-    "minPlayers": "2",
-    "maxPlayers": "5",
-    "minPlaytime": "60",
-    "maxPlaytime": "120",
-    "minAge": "12",
-    "designers": ["Wolfgang Kramer", "Richard Ulrich"],
-    "artists": ["Doris Matthäus"],
+    "year": 1995,
+    "rating": 7.954705882352941,
+    "minPlayers": 2,
+    "maxPlayers": 5,
+    "minPlaytime": 60,
+    "maxPlaytime": 120,
+    "minAge": 12,
+    "designers": [
+      "Wolfgang Kramer",
+      "Richard Ulrich"
+    ],
+    "artists": [
+      "Doris Matthäus"
+    ],
     "publishers": [
       "Hans im Glück",
       "999 Games",
@@ -1824,218 +2320,343 @@
       "Gabinete Lúdico",
       "Rio Grande Games"
     ],
-    "id": "93"
+    "id": 93
   },
   {
     "name": "Union Pacific",
-    "year": "1999",
+    "year": 1999,
     "rating": 7.1239024390243895,
-    "minPlayers": "2",
-    "maxPlayers": "6",
-    "minPlaytime": "90",
-    "maxPlaytime": "90",
-    "minAge": "12",
-    "designers": ["Alan R. Moon"],
-    "artists": ["Franz Vohwinkel"],
-    "publishers": ["AMIGO", "999 Games", "Rio Grande Games"],
-    "id": "94"
+    "minPlayers": 2,
+    "maxPlayers": 6,
+    "minPlaytime": 90,
+    "maxPlaytime": 90,
+    "minAge": 12,
+    "designers": [
+      "Alan R. Moon"
+    ],
+    "artists": [
+      "Franz Vohwinkel"
+    ],
+    "publishers": [
+      "AMIGO",
+      "999 Games",
+      "Rio Grande Games"
+    ],
+    "id": 94
   },
   {
     "name": "Igel Ärgern",
-    "year": "1990",
-    "rating": 6.425301204819276,
-    "minPlayers": "2",
-    "maxPlayers": "6",
-    "minPlaytime": "30",
-    "maxPlaytime": "30",
-    "minAge": "8",
-    "designers": ["Doris Matthäus", "Frank Nestel"],
-    "artists": ["Doris Matthäus"],
-    "publishers": ["Doris & Frank", "University Games"],
-    "id": "95"
+    "year": 1990,
+    "rating": 6.406097560975609,
+    "minPlayers": 2,
+    "maxPlayers": 6,
+    "minPlaytime": 30,
+    "maxPlaytime": 30,
+    "minAge": 8,
+    "designers": [
+      "Doris Matthäus",
+      "Frank Nestel"
+    ],
+    "artists": [
+      "Doris Matthäus"
+    ],
+    "publishers": [
+      "Doris & Frank",
+      "University Games"
+    ],
+    "id": 95
   },
   {
     "name": "Broadsides and Boarding Parties",
-    "year": "1982",
+    "year": 1982,
     "rating": 5.749295774647887,
-    "minPlayers": "2",
-    "maxPlayers": "2",
-    "minPlaytime": "60",
-    "maxPlaytime": "60",
-    "minAge": "10",
-    "designers": ["Larry Harris, Jr."],
-    "artists": [],
-    "publishers": ["Citadel's Game Series (CGS)", "Milton Bradley"],
-    "id": "96"
-  },
-  {
-    "name": "Conquest of the Empire",
-    "year": "1984",
-    "rating": 6.293975903614458,
-    "minPlayers": "2",
-    "maxPlayers": "6",
-    "minPlaytime": "180",
-    "maxPlaytime": "240",
-    "minAge": "10",
-    "designers": ["Larry Harris, Jr."],
-    "artists": [],
-    "publishers": ["Milton Bradley"],
-    "id": "97"
-  },
-  {
-    "name": "Axis & Allies",
-    "year": "1981",
-    "rating": 6.3567073170731705,
-    "minPlayers": "2",
-    "maxPlayers": "5",
-    "minPlaytime": "180",
-    "maxPlaytime": "180",
-    "minAge": "12",
-    "designers": ["Larry Harris, Jr."],
-    "artists": ["Jim Butcher (II)"],
-    "publishers": [
-      "Jedko Games",
-      "Milton Bradley",
-      "Nova Game Designs",
-      "PewterCraft"
+    "minPlayers": 2,
+    "maxPlayers": 2,
+    "minPlaytime": 60,
+    "maxPlaytime": 60,
+    "minAge": 10,
+    "designers": [
+      "Larry Harris, Jr."
     ],
-    "id": "98"
-  },
-  {
-    "name": "Fortress America",
-    "year": "1986",
-    "rating": 6.614285714285715,
-    "minPlayers": "2",
-    "maxPlayers": "4",
-    "minPlaytime": "180",
-    "maxPlaytime": "180",
-    "minAge": "12",
-    "designers": ["Michael Gray"],
     "artists": [],
-    "publishers": ["Milton Bradley"],
-    "id": "99"
+    "publishers": [
+      "Citadel's Game Series (CGS)",
+      "Milton Bradley"
+    ],
+    "id": 96
   },
   {
-    "name": "Detroit-Cleveland Grand Prix",
-    "year": "1996",
-    "rating": 6.892073170731707,
-    "minPlayers": "2",
-    "maxPlayers": "6",
-    "minPlaytime": "60",
-    "maxPlaytime": "60",
-    "minAge": "8",
-    "designers": ["Wolfgang Kramer"],
-    "artists": ["Ramon Mascarenas", "Seth Schwartz"],
-    "publishers": ["Mayfair Games"],
-    "id": "101"
-  },
-  {
-    "name": "Klunker",
-    "year": "1999",
-    "rating": 6.225352112676056,
-    "minPlayers": "3",
-    "maxPlayers": "5",
-    "minPlaytime": "30",
-    "maxPlaytime": "30",
-    "minAge": "10",
-    "designers": ["Uwe Rosenberg"],
-    "artists": ["Oliver Moser"],
-    "publishers": ["Hans im Glück", "Rio Grande Games"],
-    "id": "102"
-  },
-  {
-    "name": "Titan",
-    "year": "1980",
-    "rating": 6.8585365853658535,
-    "minPlayers": "2",
-    "maxPlayers": "6",
-    "minPlaytime": "30",
-    "maxPlaytime": "240",
-    "minAge": "12",
-    "designers": ["Jason B. McAllister", "David A. Trampier"],
+    "name": "Condottiere",
+    "year": 1995,
+    "rating": 6.5737499999999995,
+    "minPlayers": 2,
+    "maxPlayers": 6,
+    "minPlaytime": 45,
+    "maxPlaytime": 45,
+    "minAge": 14,
+    "designers": [
+      "Dominique Ehrhard",
+      "Duccio Vitale",
+      "Justin Kemppainen"
+    ],
     "artists": [
-      "Mike Doyle (I)",
-      "Kurt Miller",
-      "Kenn Nishiuye",
-      "David A. Trampier",
-      "Chris White (I)"
+      "Dominique Ehrhard",
+      "John Goodenough",
+      "Serge Hochain",
+      "Tomasz Jedruszek",
+      "Mohammad Noureddine",
+      "Scott Nicely",
+      "David Palumbo",
+      "Samuel Shimota"
     ],
     "publishers": [
-      "The Avalon Hill Game Co",
-      "Gorgonstar Publications",
-      "Heidelberger Spieleverlag",
-      "Valley Games, Inc."
-    ],
-    "id": "103"
-  },
-  {
-    "name": "Extrablatt",
-    "year": "1991",
-    "rating": 7.156756756756756,
-    "minPlayers": "3",
-    "maxPlayers": "4",
-    "minPlaytime": "90",
-    "maxPlaytime": "90",
-    "minAge": "14",
-    "designers": ["Karl-Heinz Schmiel"],
-    "artists": [],
-    "publishers": ["Moskito Spiele"],
-    "id": "104"
-  },
-  {
-    "name": "Colossal Arena",
-    "year": "1997",
-    "rating": 6.939111111111112,
-    "minPlayers": "2",
-    "maxPlayers": "5",
-    "minPlaytime": "40",
-    "maxPlaytime": "60",
-    "minAge": "8",
-    "designers": ["Reiner Knizia"],
-    "artists": [
-      "Cyrille Daujean",
-      "Thierry Doizon",
-      "Dan Harding",
-      "Steve Holmes",
-      "Jan Patrik Krásný",
-      "Tyson Milbert",
-      "Kurt Miller",
-      "Keith Parkinson"
-    ],
-    "publishers": [
-      "The Avalon Hill Game Co",
-      "Altar Games",
-      "Delta Vision Publishing",
+      "Eurogames",
+      "Arclight",
+      "Descartes Editeur",
       "Edge Entertainment",
       "Fantasy Flight Games",
-      "Hobby Japan",
-      "Korea Boardgames co., Ltd.",
+      "Galakta",
+      "Giochi Uniti",
+      "Heidelberger Spieleverlag",
+      "Hobby World",
       "Lautapelit.fi",
-      "Midgaard Games",
       "Nexus Editrice",
-      "Swan Panasia Co., Ltd.",
-      "Ubik"
+      "Roomiz Games",
+      "Ubik",
+      "Z-Man Games, Inc."
     ],
-    "id": "105"
+    "id": 112
   },
   {
-    "name": "Mystery Rummy: Jack the Ripper",
-    "year": "1998",
-    "rating": 7.151392405063292,
-    "minPlayers": "2",
-    "maxPlayers": "4",
-    "minPlaytime": "45",
-    "maxPlaytime": "45",
-    "minAge": "10",
-    "designers": ["Mike Fitzgerald"],
-    "artists": ["Christine Conrad", "Virginijus Poshkus"],
+    "name": "I'm the Boss!",
+    "year": 1994,
+    "rating": 6.749146341463415,
+    "minPlayers": 3,
+    "maxPlayers": 6,
+    "minPlaytime": 60,
+    "maxPlaytime": 60,
+    "minAge": 12,
+    "designers": [
+      "Sid Sackson"
+    ],
+    "artists": [
+      "William O'Connor"
+    ],
     "publishers": [
       "Eagle-Gryphon Games",
       "Edge Entertainment",
+      "Face2Face Games",
       "Kaissa Chess & Games",
-      "Pegasus Spiele",
-      "U.S. Games Systems, Inc."
+      "Korea Boardgames co., Ltd.",
+      "New Games Order, LLC",
+      "Schmidt Spiele",
+      "Siam Board Games",
+      "Stratelibri",
+      "Swan Panasia Co., Ltd."
     ],
-    "id": "106"
+    "id": 115
+  },
+  {
+    "name": "Modern Art",
+    "year": 1992,
+    "rating": 7.371176470588234,
+    "minPlayers": 3,
+    "maxPlayers": 5,
+    "minPlaytime": 45,
+    "maxPlaytime": 45,
+    "minAge": 10,
+    "designers": [
+      "Reiner Knizia"
+    ],
+    "artists": [
+      "Carole Carrion",
+      "Manuel Carvalho",
+      "Chen Cheng-po",
+      "Mike Doyle (I)",
+      "Pete Fenlon",
+      "Paul Laane",
+      "Ramon Martins",
+      "Daniel Melim",
+      "Rafael Silveira",
+      "Sigrid Thaler",
+      "Zeilbeck & Natzeck Design Company"
+    ],
+    "publishers": [
+      "Hans im Glück",
+      "Arrakis Games",
+      "CMON Limited",
+      "DiceTree Games",
+      "Drosselmeyer & Co. Ltd.",
+      "Galápagos Jogos",
+      "GeGe Co. Ltd.",
+      "Kaissa Chess & Games",
+      "Lautapelit.fi",
+      "Lavka Games",
+      "Matagot",
+      "Mayfair Games",
+      "New Games Order, LLC",
+      "Odysseia Jogos",
+      "Oink Games",
+      "Pegasus Spiele",
+      "Phantasia Co., Ltd",
+      "Rebel",
+      "Wargames Club Publishing"
+    ],
+    "id": 118
+  },
+  {
+    "name": "Take it Easy!",
+    "year": 1983,
+    "rating": 6.903631818181818,
+    "minPlayers": 1,
+    "maxPlayers": 8,
+    "minPlaytime": 20,
+    "maxPlaytime": 20,
+    "minAge": 10,
+    "designers": [
+      "Peter Burley"
+    ],
+    "artists": [
+      "Alexander Strohmaier",
+      "Steve Tolley",
+      "Franz Vohwinkel"
+    ],
+    "publishers": [
+      "Burley Games",
+      "F.X. Schmid",
+      "Spear's Games",
+      "Arclight",
+      "Cappelen",
+      "Cranio Creations",
+      "DiceTree Games",
+      "Eagle-Gryphon Games",
+      "förlAgo AB",
+      "IELLO",
+      "Play Smart",
+      "Ravensburger Spieleverlag GmbH",
+      "Rebel",
+      "Swan Panasia Co., Ltd.",
+      "White Goblin Games",
+      "Zvata Studios"
+    ],
+    "id": 128
+  },
+  {
+    "name": "Caesar & Cleopatra",
+    "year": 1997,
+    "rating": 6.461538461538462,
+    "minPlayers": 2,
+    "maxPlayers": 2,
+    "minPlaytime": 60,
+    "maxPlaytime": 60,
+    "minAge": 10,
+    "designers": [
+      "Wolfgang Lüdtke"
+    ],
+    "artists": [
+      "Franz Vohwinkel"
+    ],
+    "publishers": [
+      "999 Games",
+      "Filosofia Éditions",
+      "Kaissa Chess & Games",
+      "KOSMOS",
+      "Laser plus",
+      "Rio Grande Games",
+      "Tilsit"
+    ],
+    "id": 132
+  },
+  {
+    "name": "Cape Horn",
+    "year": 1999,
+    "rating": 5.968,
+    "minPlayers": 3,
+    "maxPlayers": 5,
+    "minPlaytime": 45,
+    "maxPlaytime": 45,
+    "minAge": 12,
+    "designers": [
+      "Thorsten Gimmler"
+    ],
+    "artists": [
+      "Anke Pohl",
+      "Thilo Rick",
+      "Claus Stephan"
+    ],
+    "publishers": [
+      "KOSMOS",
+      "Rio Grande Games",
+      "Tilsit"
+    ],
+    "id": 134
+  },
+  {
+    "name": "Buy Low Sell High",
+    "year": 1996,
+    "rating": 6.018684210526316,
+    "minPlayers": 2,
+    "maxPlayers": 4,
+    "minPlaytime": 60,
+    "maxPlaytime": 60,
+    "minAge": 12,
+    "designers": [
+      "Reiner Knizia"
+    ],
+    "artists": [
+      "Miles Germer",
+      "Alvin Madden"
+    ],
+    "publishers": [
+      "Editrice Giochi",
+      "Überplay",
+      "Wargames Club Publishing"
+    ],
+    "id": 146
+  },
+  {
+    "name": "PitchCar",
+    "year": 1995,
+    "rating": 7.285,
+    "minPlayers": 2,
+    "maxPlayers": 8,
+    "minPlaytime": 30,
+    "maxPlaytime": 30,
+    "minAge": 6,
+    "designers": [
+      "Jean du Poël"
+    ],
+    "artists": [
+      "Jean du Poël"
+    ],
+    "publishers": [
+      "Ferti",
+      "Goldsieber Spiele",
+      "Historien Spiele Galerie (Historien Spielegalerie)",
+      "Lautapelit.fi",
+      "Vision"
+    ],
+    "id": 150
+  },
+  {
+    "name": "Piratenbillard",
+    "year": 1959,
+    "rating": 6.426111111111111,
+    "minPlayers": 2,
+    "maxPlayers": 4,
+    "minPlaytime": 15,
+    "maxPlaytime": 15,
+    "minAge": 8,
+    "designers": [
+      "Reinhold Wittig"
+    ],
+    "artists": [
+      "Franz Vohwinkel",
+      "Reinhold Wittig"
+    ],
+    "publishers": [
+      "ABACUSSPIELE"
+    ],
+    "id": 151
   }
 ]
