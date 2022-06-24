@@ -1,7 +1,7 @@
 function boardGameController (BoardGame) {
   function post (req, res) {
     const boardGame = new BoardGame(req.body)
-    if (boardGame.id && boardGame.name && boardGame.year) {
+    if (boardGame.name && boardGame.year) {
       boardGame.save((error) => {
         if (error) {
           return res.status(400).json({ error })
