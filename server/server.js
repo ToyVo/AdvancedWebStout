@@ -2,7 +2,6 @@ import express from 'express'
 import chalk from 'chalk'
 import morgan from 'morgan'
 import path from 'path'
-import GameRouter from './routers/gameRouter'
 import Debug from 'debug'
 import gameApi from './api/gameApi'
 
@@ -21,9 +20,8 @@ app.set('view engine', 'ejs')
 
 const title = 'Game Browser'
 app.use('/api/games', gameApi(title))
-app.use('/games', GameRouter(title))
 app.get('/', (req, res) => {
-  res.render('index', { title })
+  res.sendFile(path.join(__dirname, 'index.html'))
 })
 
 app.listen(port, () => {

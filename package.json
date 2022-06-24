@@ -5,8 +5,8 @@
   "main": "app.js",
   "private": true,
   "scripts": {
-    "start": "DEBUG=server nodemon --exec babel-node server/index.js",
-    "start:win": "set DEBUG=app & nodemon --exec babel-node server/index.js",
+    "start": "DEBUG=server nodemon --exec babel-node server/server.js",
+    "start:win": "set DEBUG=app & nodemon --exec babel-node server/server.js",
     "lint": "eslint --fix ."
   },
   "repository": {
