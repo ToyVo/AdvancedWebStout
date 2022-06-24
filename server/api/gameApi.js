@@ -1,44 +1,28 @@
 import express from 'express'
-import rawGames from './games'
-import BoardGame from '../public/js/BoardGame'
+import games from './games'
 
 export default function newApiRouter (title) {
-  /** @type {BoardGame[]} */
-  const games = []
-  for (const game of rawGames) {
-    games.push(BoardGame.parse(game))
-  }
+  const partialGames = games.map(game => ({
+    id: game.id,
+    name: game.name,
+    year: game.year
+  }));
 
   const router = express.Router()
 
   router.route('/')
     .get((req, res) => {
-      let partialJSON = '['
-      for (const game of games) {
-        partialJSON += game.stringifyPartial()
-        if (games.indexOf(game) !== games.length - 1) {
-          partialJSON += ','
-        }
-      }
-      partialJSON += ']'
-
-      res.contentType('application/json').send(partialJSON)
+      res.json(partialGames)
     })
 
   router.route('/:id')
     .get((req, res) => {
       const id = req.params.id
-      /** @type {?BoardGame} */
-      let singleGame = null
-      for (const game of games) {
-        if (game.id === id) {
-          singleGame = game
-        }
-      }
+      const singleGame = games.find(game => game.id === id)
       if (singleGame) {
-        res.contentType('application/json').send(singleGame.stringify())
+        res.json(singleGame)
       } else {
-        res.status(404).send('game not found')
+        res.status(404).json({"error":"game not found"})
       }
     })
 
