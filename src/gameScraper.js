@@ -7,14 +7,15 @@ const boardGames = []
 let lastId = 1
 fetchGames()
 
-async function fetchGames() {
-  let game = null;
-  while (boardGames.length < 100) {
-    game = await fetchGame()
-    boardGames.push(game)
-    console.log(boardGames)
-  }
-
+function fetchGames() {
+  fetchGame().then(game => {
+    if (boardGames.length < 100) {
+      fetchGames()
+    } else {
+      console.log(boardGames.length)
+      fs.writeFileSync('games.json', JSON.stringify(boardGames))
+    }
+  })
 }
 
 function fetchGame() {
@@ -24,9 +25,16 @@ function fetchGame() {
       .then(data => {
         xml2js.parseString(data, (err, result) => {
           if (err) rej(err)
-          if (result.items.item) {
-            res(BoardGame.parse(result.items.item[0]))
+          if (result) {
+            if (result.items) {
+              if (result.items.item) {
+                let game = BoardGame.parse(result.items.item[0])
+                boardGames.push(game)
+                console.log(game)
+              }
+            }
           }
+          res()
         })
       })
       .catch(e => {
