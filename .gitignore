@@ -4,3 +4,4 @@ node_modules
 .vscode
 public/index.html
 public/app.bundle.js
+public/vendor.bundle.js
