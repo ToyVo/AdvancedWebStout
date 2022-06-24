@@ -17,7 +17,7 @@ export default class BoardGame {
    * @param {string} publishers list of publishers for game
    * @param {number} id unique identifies corresponding to BGG game id
    */
-  constructor(
+  constructor (
     name,
     year,
     rating,
@@ -31,26 +31,26 @@ export default class BoardGame {
     publishers,
     id
   ) {
-    this.name = name;
-    this.year = year;
-    this.rating = rating;
-    this.minPlayers = minPlayers;
-    this.maxPlayers = maxPlayers;
-    this.minPlaytime = minPlaytime;
-    this.maxPlaytime = maxPlaytime;
-    this.minAge = minAge;
-    this.designers = designers;
-    this.artists = artists;
-    this.publishers = publishers;
-    this.id = id;
+    this.name = name
+    this.year = year
+    this.rating = rating
+    this.minPlayers = minPlayers
+    this.maxPlayers = maxPlayers
+    this.minPlaytime = minPlaytime
+    this.maxPlaytime = maxPlaytime
+    this.minAge = minAge
+    this.designers = designers
+    this.artists = artists
+    this.publishers = publishers
+    this.id = id
   }
 
-  stringify() {
-    return JSON.stringify(this);
+  stringify () {
+    return JSON.stringify(this)
   }
 
-  static parse(jsonObject) {
-    const obj = JSON.parse(jsonObject);
+  static parse (jsonObject) {
+    const obj = JSON.parse(jsonObject)
     return new BoardGame(
       obj.name,
       obj.year,
@@ -64,6 +64,6 @@ export default class BoardGame {
       obj.artists,
       obj.publishers,
       obj.id
-    );
+    )
   }
 }

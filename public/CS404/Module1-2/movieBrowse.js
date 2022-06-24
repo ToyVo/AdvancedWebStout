@@ -1,31 +1,32 @@
+/* eslint-disable no-undef */
 // once the document is ready
 $(document).ready(() => {
   // send an AJAX get request
   $.get(
-    "movieBrowseJSON.php",
+    'movieBrowseJSON.php',
     data => {
       // process revieved movies
-      const tiles = [];
+      const tiles = []
       data.forEach((movie, i) => {
-        tiles.push($(makeMovieTile(movie)));
-      });
+        tiles.push($(makeMovieTile(movie)))
+      })
       // Mount the new tiles into the dom
-      $("#movieGrid").append(tiles);
+      $('#movieGrid').append(tiles)
 
-      $(".movieTileLink").click((event) => {
-          event.preventDefault();
-          console.log(event);
+      $('.movieTileLink').click((event) => {
+        event.preventDefault()
+        console.log(event)
       })
     },
-    "json"
-  );
-});
+    'json'
+  )
+})
 
 /**
  *
  * @param {id: string, title: string, year: number, genres: string, image: string, rated: string } movie
  */
-function makeMovieTile(movie) {
+function makeMovieTile (movie) {
   const movieTile = $.parseHTML(`
     <div class='col-xs-6 col-sm-6 col-md-4 col-lg-3'>
         <div class='movieSummary'>
@@ -37,7 +38,7 @@ function makeMovieTile(movie) {
             <span class="summaryInfo">${movie.genres}<br>${movie.year} ${movie.rating}</span>
         </div>
     </div>
-    `);
+    `)
 
-    return movieTile;
+  return movieTile
 }
