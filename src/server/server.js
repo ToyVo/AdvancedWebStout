@@ -11,17 +11,14 @@ const port = process.env.PORT || 3000
 
 const app = express()
 app.use(morgan('tiny'))
-app.use(express.static(path.join(__dirname, 'public')))
-app.use('/css', express.static(path.join(__dirname, '../node_modules/bootstrap/dist/css')))
-app.use('/js', express.static(path.join(__dirname, '../node_modules/bootstrap/dist/js')))
-app.use('/js', express.static(path.join(__dirname, '../node_modules/jquery/dist')))
+app.use(express.static(path.join(__dirname, '../../public')))
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
 
 const title = 'Game Browser'
 app.use('/api/games', gameApi(title))
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'))
+  res.sendFile(path.join(__dirname, '../app/index.html'))
 })
 
 app.listen(port, () => {
