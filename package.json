@@ -1,0 +1,24 @@
+{
+  "name": "advancedwebstout",
+  "version": "1.0.0",
+  "description": "Anything that I am doing during my Advanced Web and Internet Programming class",
+  "main": "app.js",
+  "private": true,
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ToyVo/AdvancedWebStout.git"
+  },
+  "author": "Collin Diekvoss",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ToyVo/AdvancedWebStout/issues"
+  },
+  "homepage": "https://github.com/ToyVo/AdvancedWebStout#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0"
+  }
+}
