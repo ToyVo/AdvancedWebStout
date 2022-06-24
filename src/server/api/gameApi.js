@@ -1,7 +1,7 @@
 import express from 'express'
-
 // bring in the raw json data, we can import it like this instead of doing
 // fs.readfile, this will bring it in as a javascript object, in this case an array
+/** @type {BoardGame[]} */
 import games from './games'
 
 export const partialGames = games.map((game) => ({
@@ -20,7 +20,7 @@ export default function ApiRouter () {
 
   // get all data for a specific game
   router.route('/:id').get((req, res) => {
-    const id = req.params.id
+    const id = Number.parseInt(req.params.id)
     const singleGame = games.find((game) => game.id === id)
     if (singleGame) {
       res.json(singleGame)
