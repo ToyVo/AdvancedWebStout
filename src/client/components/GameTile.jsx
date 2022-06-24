@@ -14,7 +14,7 @@ class GameTile extends React.Component {
           <a
             onClick={this.gameTileClicked}
             className='gameTileLink'
-            href={`/api/games/${this.props.gameData.id}`}
+            href={`/api/games/${this.props.gameData._id}`}
           >
             <span className='summaryTitle'> {this.props.gameData.name}</span>
           </a>
@@ -29,7 +29,7 @@ class GameTile extends React.Component {
    */
   gameTileClicked (event) {
     event.preventDefault()
-    this.props.activeGameCallback(this.props.gameData.id)
+    this.props.activeGameCallback(this.props.gameData._id)
   }
 }
 
