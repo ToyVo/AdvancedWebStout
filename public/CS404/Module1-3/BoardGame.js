@@ -49,7 +49,7 @@ export default class BoardGame {
     return JSON.stringify(this);
   }
 
-  parse(jsonObject) {
+  static parse(jsonObject) {
     const obj = JSON.parse(jsonObject);
     return new BoardGame(
         obj.name,
