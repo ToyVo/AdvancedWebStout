@@ -13,18 +13,20 @@ class AddGameButton extends React.Component {
       maxPlaytime: '',
       minAge: '',
       rating: '',
-      designers: [],
-      artists: [],
-      publishers: [],
+      designers: '',
+      artists: '',
+      publishers: '',
       id: ''
     }
 
     this.openModal = this.openModal.bind(this)
     this.handleInputChange = this.handleInputChange.bind(this)
+    this.clearModal = this.clearModal.bind(this)
+    this.submitGame = this.submitGame.bind(this)
   }
 
   openModal () {
-    $('#addGameModal').modal()
+    $('#addGameModal').modal({ backdrop: 'static' })
   }
 
   handleInputChange (event) {
@@ -37,11 +39,62 @@ class AddGameButton extends React.Component {
     })
   }
 
+  clearModal (event) {
+    event.preventDefault()
+    event.stopPropagation()
+
+    // hide modal
+    $('#addGameModal').modal('hide')
+    // clear validation css
+    $('#newGameForm').removeClass('was-validated')
+    // hide error alert
+    $('#addGameAlert').addClass('hidden')
+
+    this.setState({
+      name: '',
+      year: '',
+      minPlayers: '',
+      maxPlayers: '',
+      minPlaytime: '',
+      maxPlaytime: '',
+      minAge: '',
+      rating: '',
+      designers: '',
+      artists: '',
+      publishers: '',
+      id: ''
+    })
+  }
+
+  submitGame (event) {
+    // stop submit event
+    event.preventDefault()
+    event.stopPropagation()
+
+    const form = document.getElementById('newGameForm')
+    if (form.checkValidity() === false) {
+      // apply validation css if validation fails
+      form.classList.add('was-validated')
+    } else {
+      // Process designers, artists, and publishers, since they should be arrays, but will come in as strings
+      // submit game to backend server to persist changes
+      // either send game back up to App.jsx so it can add it to it's state, or send an event prompting it do rerequest data from backend
+
+      // this would come in a axios.post().then()
+      this.clearModal(event)
+      // .catch((e) => {$('#addGameAlert').removeClass('hidden')})
+    }
+  }
+
   render () {
     return (
       <div>
         <div className='row'>
-          <button id='addGameButton' className='btn btn-primary'>
+          <button
+            id='addGameButton'
+            className='btn btn-primary'
+            onClick={this.openModal}
+          >
             Add Game
           </button>
         </div>
@@ -171,7 +224,6 @@ class AddGameButton extends React.Component {
                         placeholder='Min Age'
                         name='minAge'
                         min='0'
-
                         value={this.state.minAge}
                         onChange={this.handleInputChange}
                       />
@@ -188,7 +240,6 @@ class AddGameButton extends React.Component {
                         placeholder='Max Players'
                         name='maxPlayers'
                         min='0'
-
                         value={this.state.maxPlayers}
                         onChange={this.handleInputChange}
                       />
@@ -203,7 +254,6 @@ class AddGameButton extends React.Component {
                         placeholder='Max PlayTime'
                         name='maxPlaytime'
                         min='0'
-
                         value={this.state.maxPlaytime}
                         onChange={this.handleInputChange}
                       />
@@ -220,7 +270,6 @@ class AddGameButton extends React.Component {
                         min='0'
                         max='10'
                         step='0.1'
-
                         value={this.state.rating}
                         onChange={this.handleInputChange}
                       />
@@ -235,7 +284,7 @@ class AddGameButton extends React.Component {
                       id='newGameDesigners'
                       name='designers'
                       placeholder='Designers'
-                      value={this.state.designers.join(', ')}
+                      value={this.state.designers}
                       onChange={this.handleInputChange}
                     />
                   </div>
@@ -247,8 +296,7 @@ class AddGameButton extends React.Component {
                       id='newGameArtists'
                       name='artists'
                       placeholder='Artists'
-
-                      value={this.state.artists.join(', ')}
+                      value={this.state.artists}
                       onChange={this.handleInputChange}
                     />
                   </div>
@@ -260,8 +308,7 @@ class AddGameButton extends React.Component {
                       id='newGamePublishers'
                       name='publishers'
                       placeholder='Publishers'
-
-                      value={this.state.publishers.join(', ')}
+                      value={this.state.publishers}
                       onChange={this.handleInputChange}
                     />
                   </div>
@@ -270,11 +317,15 @@ class AddGameButton extends React.Component {
                   <button
                     type='reset'
                     className='btn btn-secondary'
-                    data-dismiss='modal'
+                    onClick={this.clearModal}
                   >
                     Close
                   </button>
-                  <button type='submit' className='btn btn-primary'>
+                  <button
+                    type='submit'
+                    className='btn btn-primary'
+                    onClick={this.submitGame}
+                  >
                     Save changes
                   </button>
                 </div>
