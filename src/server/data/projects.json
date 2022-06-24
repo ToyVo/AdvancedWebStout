@@ -1,0 +1,16 @@
+[
+  {
+    "name": "project1",
+    "publishDate": "2020-01-19T23:15:30.000Z",
+    "updateDate": "2020-05-03T23:36:07.979Z",
+    "creator": "Test Creator",
+    "imageURLs": [
+      "/files/project1/image1.png",
+      "/files/project1/image2.png"
+    ],
+    "fileURLs": [
+      "/files/project1/file1.txt",
+      "/files/project1/file2.txt"
+    ]
+  }
+]

@@ -9,8 +9,7 @@ module.exports = (env, argv) => {
 
     // output bundle
     output: {
-      filename: '[name].bundle.js',
-      path: path.join(__dirname, 'public')
+      filename: '[name].bundle.js', path: path.join(__dirname, 'public')
     },
 
     // extract third party libraries
@@ -18,9 +17,7 @@ module.exports = (env, argv) => {
       splitChunks: {
         cacheGroups: {
           commons: {
-            test: /[\\/]node_modules[\\/]/,
-            name: 'vendor',
-            chunks: 'all'
+            test: /[\\/]node_modules[\\/]/, name: 'vendor', chunks: 'all'
           }
         }
       }
@@ -35,23 +32,18 @@ module.exports = (env, argv) => {
           use: {
             loader: 'babel-loader',
             options: {
-              presets: ['@babel/preset-env', '@babel/preset-react'],
-              plugins: ['@babel/plugin-transform-async-to-generator']
+              presets: ['@babel/preset-env', '@babel/preset-react'], plugins: ['@babel/plugin-transform-async-to-generator']
             }
           }
-        },
-        {
-          test: /\.css$/,
-          use: ['style-loader', 'css-loader']
+        }, {
+          test: /\.css$/, use: ['style-loader', 'css-loader']
         }
       ]
     },
 
     plugins: [
       new HtmlWebpackPlugin({
-        template: path.join(__dirname, 'src', 'client', 'index.html'),
-        filename: path.join(__dirname, 'public', 'index.html'),
-        inject: 'head'
+        template: path.join(__dirname, 'src', 'client', 'index.html'), filename: path.join(__dirname, 'public', 'index.html'), inject: 'head'
       })
     ]
   }
@@ -59,9 +51,7 @@ module.exports = (env, argv) => {
   if (argv.mode === 'development') {
     config.devtool = 'inline-source-map'
     config.devServer = {
-      contentBase: path.join(__dirname, 'public'),
-      compress: true,
-      port: 9000
+      contentBase: path.join(__dirname, 'public'), compress: true, port: 9000
     }
   }
 
