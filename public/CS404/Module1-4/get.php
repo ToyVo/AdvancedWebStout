@@ -6,7 +6,7 @@ include "database.php";
 $db = connectToDatabase(DBDeets::DB_NAME_BOARDGAME);
 if ($db->connect_error) {
     http_response_code(500);
-    die('{ "error": "Connection failed - "' . $db->connect_error . '" }');
+    die('{ "error": "Connection failed - ' . $db->connect_error . '" }');
 }
 
 if (isset($_GET['id'])) {
@@ -14,7 +14,7 @@ if (isset($_GET['id'])) {
     $gameID = $_GET['id'];
 
     // 2. Run the Query
-    $stmt = simpleQueryParam($db, "SELECT * FROM boardgames WHERE id=?", "s", $gameID);
+    $stmt = simpleQueryParam($db, "SELECT * FROM boardgames WHERE id=?", "i", $gameID);
     if ($stmt == NULL) {
         http_response_code(500);
         die('{ "error": "Query failed - ' . $stmt->error . '" }');
@@ -38,7 +38,7 @@ if (isset($_GET['id'])) {
     $stmt = simpleQuery($db, "SELECT id, name, publishers FROM boardgames");
     if ($stmt == NULL) {
         http_response_code(500);
-        die('{ "error": "Query failed - "' . $stmt->error . '" }');
+        die('{ "error": "Query failed - ' . $stmt->error . '" }');
     }
     $stmt->bind_result($gameID, $gameName, $gamePublishers);
     $contimue = $stmt->fetch();
