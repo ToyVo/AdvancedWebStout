@@ -1,25 +1,29 @@
+body {
+    font-family: Roboto, serif;
+}
+
 .gameSummary {
     border: 1px solid darkgrey;
     text-align: center;
     padding: 5px;
     margin-bottom: 15px;
     vertical-align: bottom;
-  }
+}
 
-  .summaryTitle {
+.summaryTitle {
     display: block;
     font-size: medium;
-  }
+}
 
-  .summaryInfo {
+.summaryInfo {
     display: block;
     font-size: medium;
-  }
+}
 
-  .hidden {
+.hidden {
     display: none !important;
-  }
+}
 
-  .full-width {
+.full-width {
     width: 100%
-  }
+}
