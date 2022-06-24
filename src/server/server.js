@@ -24,5 +24,5 @@ app.use('/api/games', gameApi())
 
 // listen on port and debug when it is ready
 app.listen(port, () => {
-  debug(`listening on port ${chalk.green(port)}`)
+  debug(`listening on port ${chalk.green(`http://localhost:${port}`)}`)
 })
