@@ -11,7 +11,7 @@ class GameGrid extends React.Component {
           {this.props.gamesData.map((game) => (
             <GameTile
               gameData={game}
-              key={game.id}
+              key={game._id}
               activeGameCallback={this.props.activeGameCallback}
             />
           ))}
