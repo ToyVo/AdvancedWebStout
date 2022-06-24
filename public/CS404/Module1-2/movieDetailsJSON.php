@@ -9,7 +9,7 @@ if (isset($_GET['id'])) {
     $db = connectToDatabase(DBDeets::DB_NAME_MYFLIX);
     if ($db->connect_error) {
         http_response_code(500);
-        die('{ "error": "Connection failed - "' . $DBconn->connect_error . '" }');
+        die('{ "error": "Connection failed - "' . $db->connect_error . '" }');
     }
 
     // 2. Run the Query
