@@ -1,13 +1,13 @@
 import https from 'https'
 import fs from 'fs'
 import xml2js from 'xml2js'
-import BoardGame from './BoardGame'
+import BoardGame from './public/js/BoardGame'
 
 const boardGames = []
 let lastId = 1
 fetchGames()
 
-function fetchGames() {
+function fetchGames () {
   fetchGame().then(game => {
     if (boardGames.length < 100) {
       fetchGames()
@@ -18,37 +18,39 @@ function fetchGames() {
   })
 }
 
-function fetchGame() {
-  return new Promise((res, rej) => {
-    let url = `https://www.boardgamegeek.com/xmlapi2/thing?comments=1&id=${lastId++}`
+function fetchGame () {
+  return new Promise((resolve, reject) => {
+    const url = `https://www.boardgamegeek.com/xmlapi2/thing?comments=1&id=${lastId++}`
     retrieveData(url)
       .then(data => {
         xml2js.parseString(data, (err, result) => {
-          if (err) rej(err)
+          if (err) reject(err)
           if (result) {
             if (result.items) {
               if (result.items.item) {
-                let game = BoardGame.parse(result.items.item[0])
+                const game = BoardGame.parse(result.items.item[0])
                 boardGames.push(game)
                 console.log(game)
               }
             }
           }
-          res()
+          resolve()
         })
       })
       .catch(e => {
-        rej(e)
+        reject(e)
       })
   })
 }
 
-function retrieveData(url) {
+function retrieveData (url) {
   return new Promise((resolve, reject) => {
     // send GET request to url
     https.get(url, response => {
-      let rawData = '';
-      response.on('data', chunk => rawData += chunk)
+      let rawData = ''
+      response.on('data', (chunk) => {
+        rawData += chunk
+      })
       response.on('end', () => resolve(rawData))
     }).on('error', err => reject(err))
   })

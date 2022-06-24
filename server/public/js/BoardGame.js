@@ -17,8 +17,7 @@ export default class BoardGame {
    * @param {string} publishers list of publishers for game
    * @param {number} id unique identifies corresponding to BGG game id
    */
-  constructor(
-    name,
+  constructor (name,
     year,
     rating,
     minPlayers,
@@ -31,49 +30,62 @@ export default class BoardGame {
     publishers,
     id
   ) {
-    this.name = name;
-    this.year = year;
-    this.rating = rating;
-    this.minPlayers = minPlayers;
-    this.maxPlayers = maxPlayers;
-    this.minPlaytime = minPlaytime;
-    this.maxPlaytime = maxPlaytime;
-    this.minAge = minAge;
-    this.designers = designers;
-    this.artists = artists;
-    this.publishers = publishers;
-    this.id = id;
+    this.name = name
+    this.year = year
+    this.rating = rating
+    this.minPlayers = minPlayers
+    this.maxPlayers = maxPlayers
+    this.minPlaytime = minPlaytime
+    this.maxPlaytime = maxPlaytime
+    this.minAge = minAge
+    this.designers = designers
+    this.artists = artists
+    this.publishers = publishers
+    this.id = id
+  }
+
+  /**
+   * #return {string} a json formatted string containing minimal information
+   */
+  stringifyPartial () {
+    return JSON.stringify({
+      id: this.id, name: this.name, year: this.year
+    })
   }
 
   /**
    * @returns {string} a json formated string of this game
    */
-  stringify() {
-    return JSON.stringify(this);
+  stringify () {
+    return JSON.stringify(this)
   }
 
   /**
    * determines in what way to parse this game
-   * @param {} jsonObject 
+   * @param {string | {name, yearpublished, minplayers, maxplayers, minplaytime, maxplaytime, minage, link, comments, $} | {name, year, rating, minPlayers, maxPlayers, minPlaytime, maxPlaytime, minAge, designers, artists, publishers, id}} jsonObject
    */
-  static parse(jsonObject) {
-    // indicates that the object was parsed with XML2JS
-    if (jsonObject.name) {
+  static parse (jsonObject) {
+    if (jsonObject.link) {
+      // will be an object parsed by XML2JS
       return BoardGame.parseXML2JS(jsonObject)
+    } else if (jsonObject.id) {
+      // will be a javascript object, missing functions of BoardGame
+      return BoardGame.parseJsObject(jsonObject)
     } else {
-      console.log("JSON")
+      // will be a plain JSON string
+      return BoardGame.parseJSON(jsonObject)
     }
   }
 
   /**
    * Create a BoardGame from XML2JS
-   * @param {any} game a game already parsed from XML by XML2JS
+   * @param {{name, yearpublished, minplayers, maxplayers, minplaytime, maxplaytime, minage, link, comments, $}} game a game already parsed from XML by XML2JS
    * @returns {BoardGame} board game object from xml
    */
-  static parseXML2JS(game) {
+  static parseXML2JS (game) {
     const name = game.name[0].$.value
     const year = game.yearpublished[0].$.value
-    let rating = 0;
+    let rating = 0
     const minPlayers = game.minplayers[0].$.value
     const maxPlayers = game.maxplayers[0].$.value
     const minPlaytime = game.minplaytime[0].$.value
@@ -100,7 +112,19 @@ export default class BoardGame {
       }
     }
     rating = rating / ratingCount
-    return new BoardGame(name, year, rating, minPlayers, maxPlayers, minPlaytime, maxPlaytime, minAge, designers, artists, publishers, id)
+    return new BoardGame(name,
+      year,
+      rating,
+      minPlayers,
+      maxPlayers,
+      minPlaytime,
+      maxPlaytime,
+      minAge,
+      designers,
+      artists,
+      publishers,
+      id
+    )
   }
 
   /**
@@ -108,10 +132,18 @@ export default class BoardGame {
    * @param {string} jsonObject
    * @returns {BoardGame} parsed board game
    */
-  static parseJSON(jsonObject) {
-    const obj = JSON.parse(jsonObject);
-    return new BoardGame(
-      obj.name,
+  static parseJSON (jsonObject) {
+    const obj = JSON.parse(jsonObject)
+    return BoardGame.parseJsObject(obj)
+  }
+
+  /**
+   * transforms a js object to a boardGame object
+   * @param {{name, year, rating, minPlayers, maxPlayers, minPlaytime, maxPlaytime, minAge, designers, artists, publishers, id}} obj
+   * @returns {BoardGame}
+   */
+  static parseJsObject (obj) {
+    return new BoardGame(obj.name,
       obj.year,
       obj.rating,
       obj.minPlayers,
@@ -123,6 +155,6 @@ export default class BoardGame {
       obj.artists,
       obj.publishers,
       obj.id
-    );
+    )
   }
 }
