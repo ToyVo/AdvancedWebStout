@@ -13,8 +13,13 @@ class App extends React.Component {
       activeGame: null
     }
     this.setActiveGame = this.setActiveGame.bind(this)
+    this.submitGame = this.submitGame.bind(this)
   }
 
+  /**
+   * set the active game for use in the game details modal
+   * @param {string} gameID the id of the game
+   */
   setActiveGame (gameID) {
     Axios.get(`/api/games/${gameID}`)
       .then((results) => {
@@ -28,6 +33,31 @@ class App extends React.Component {
       })
   }
 
+  /**
+   * submit a board game to the database to persist
+   * @param {{
+    name: string,
+    year: number,
+    rating: number,
+    minPlayers: number,
+    maxPlayers: number,
+    minPlaytime: number,
+    maxPlaytime: number,
+    minAge: number,
+    designers: string[],
+    artists: string[],
+    publishers: string[],
+    id: number
+    }} boardGame board game to be submitted to the database
+   */
+  submitGame (boardGame) {
+    console.log(boardGame)
+    this.setState({ gamesData: [...this.state.gamesData, boardGame] })
+  }
+
+  /**
+   * fetch all data from server on mount
+   */
   componentDidMount () {
     Axios.get('/api/games')
       .then((results) => {
@@ -54,7 +84,7 @@ class App extends React.Component {
             gamesData={this.state.gamesData}
             activeGameCallback={this.setActiveGame}
           />
-          <AddGameButton/>
+          <AddGameButton submitGame={this.submitGame}/>
         </div>
         {this.state.activeGame && (
           <GameDetailsModal game={this.state.activeGame} />
