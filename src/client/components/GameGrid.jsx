@@ -9,7 +9,7 @@ class GameGrid extends React.Component {
       <div className='col-12'>
         <div className='row'>
           {this.props.gamesData.map((game) => (
-            <GameTile gameData={game} key={game.id} />
+            <GameTile gameData={game} key={game.id} activeGameCallback={this.props.activeGameCallback} />
           ))}
         </div>
       </div>
@@ -18,7 +18,8 @@ class GameGrid extends React.Component {
 }
 
 GameGrid.propTypes = {
-  gamesData: PropTypes.arrayOf(PropTypes.object).isRequired
+  gamesData: PropTypes.arrayOf(PropTypes.object).isRequired,
+  activeGameCallback: PropTypes.func.isRequired
 }
 
 export default GameGrid
