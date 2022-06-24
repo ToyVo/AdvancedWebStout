@@ -13,8 +13,7 @@
     "client:dev": "webpack --mode development --watch true",
     "client:dev-server": "webpack-dev-server --mode development --watch true",
     "lint": "eslint --fix ./src",
-    "initialize-db": "babel-node src/server/data/initialize-db",
-    "game-scraper": "babel-node src/server/data/gameScraper"
+    "initialize-db": "babel-node src/server/data/initialize-db"
   },
   "repository": {
     "type": "git",
