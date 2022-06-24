@@ -5,7 +5,7 @@
   "main": "app.js",
   "private": true,
   "scripts": {
-    "start": "babel-node src/app.js",
+    "start": "babel-node src/gameScraper.js",
     "build": "babel src -o dist.js"
   },
   "repository": {
