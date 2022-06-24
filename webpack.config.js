@@ -14,7 +14,7 @@ module.exports = (env, argv) => {
       path: path.join(__dirname, 'public')
     },
 
-    // extract thrid party libraries
+    // extract third party libraries
     optimization: {
       splitChunks: {
         cacheGroups: {
