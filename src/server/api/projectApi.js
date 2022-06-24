@@ -1,20 +1,20 @@
 import express from 'express'
-import boardGameController from '../controllers/boardGameController'
+import projectController from '../controllers/projectController'
 
-export default function ApiRouter (BoardGame) {
+export default function ApiRouter (ProjectModel) {
   const router = express.Router()
-  const controller = boardGameController(BoardGame)
+  const controller = projectController(ProjectModel)
 
   router.route('/')
-    // Read all games, with partial data
+    // Read all projects, with partial data
     .get(controller.getAll)
     // Create
     .post(controller.post)
 
-  // middle wear for getting a specific game by an id
+  // middle wear for getting a specific project by an id
   router.use('/:id', controller.findOne)
   router.route('/:id')
-    // Read all data for a specific game
+    // Read all data for a specific project
     .get(controller.getOne)
     // Update a whole object
     .put(controller.putOne)

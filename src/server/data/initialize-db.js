@@ -1,7 +1,7 @@
-import gamesData from './games.json'
+import projectsData from './projects.json'
 import { MongoClient } from 'mongodb'
 
-const url = 'mongodb://localhost:27017/BoardGameBrowser'
+const url = 'mongodb://localhost:27017/ProjectBrowser'
 let db = null
 let client = null
 
@@ -12,8 +12,7 @@ let client = null
 async function connectDB () {
   if (!db) {
     client = await MongoClient.connect(url, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true
+      useNewUrlParser: true, useUnifiedTopology: true
     })
     db = client.db()
   }
@@ -28,7 +27,7 @@ function closeClient () {
 
 async function initializeDB () {
   const defaultState = {
-    games: [...gamesData]
+    projects: [...projectsData]
   }
 
   const db = await connectDB()
