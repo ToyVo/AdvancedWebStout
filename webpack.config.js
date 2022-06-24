@@ -5,7 +5,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = (env, argv) => {
   const config = {
     entry: {
-      app: path.join(__dirname, 'src', 'client', 'index.js')
+      app: path.join(__dirname, 'src', 'client', 'index.js'),
+      vendor: ['jquery', 'axios', 'popper.js', 'bootstrap']
     },
 
     // output bundle
@@ -14,11 +15,25 @@ module.exports = (env, argv) => {
       path: path.join(__dirname, 'public')
     },
 
+    // extract thrid party libraries
+    optimization: {
+      splitChunks: {
+        cacheGroups: {
+          vendor: {
+            chunks: 'initial',
+            name: 'vendor',
+            test: 'vendor',
+            enforce: true
+          }
+        }
+      }
+    },
+
     // rules
     module: {
       rules: [
         {
-          test: /\.js$/,
+          test: /\.jsx?$/,
           exclude: /node_modules/,
           use: {
             loader: 'babel-loader',
