@@ -13,8 +13,8 @@
     "client:dev": "webpack --mode development --watch true",
     "client:dev-server": "webpack-dev-server --mode development --watch true",
     "lint": "eslint --fix ./src",
-    "initialize-db": "babel-node src/server/initialize-db",
-    "game-scraper": "babel-node src/server/gameScraper"
+    "initialize-db": "babel-node src/server/data/initialize-db",
+    "game-scraper": "babel-node src/server/data/gameScraper"
   },
   "repository": {
     "type": "git",
@@ -75,7 +75,8 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.19.0",
-    "eslint-plugin-standard": "^4.0.1"
+    "eslint-plugin-standard": "^4.0.1",
+    "prop-types": "^15.7.2"
   },
   "nodemonConfig": {
     "execMap": {
