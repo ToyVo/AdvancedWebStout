@@ -3,6 +3,7 @@ import Axios from 'axios'
 import Banner from './Banner.jsx'
 import GameGrid from './GameGrid.jsx'
 import GameDetailsModal from './GameDetailsModal.jsx'
+import AddGameButton from './AddGameButton.jsx'
 
 class App extends React.Component {
   constructor(props) {
@@ -53,6 +54,7 @@ class App extends React.Component {
             gamesData={this.state.gamesData}
             activeGameCallback={this.setActiveGame}
           />
+          <AddGameButton/>
         </div>
         {this.state.activeGame && (
           <GameDetailsModal game={this.state.activeGame} />
