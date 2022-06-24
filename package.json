@@ -5,6 +5,7 @@
   "main": "app.js",
   "private": true,
   "scripts": {
+    "start": "babel-node src/app.js",
     "build": "babel src -o dist.js"
   },
   "repository": {
@@ -20,7 +21,8 @@
   "dependencies": {
     "express": "^4.17.1",
     "react": "^16.13.0",
-    "react-dom": "^16.13.0"
+    "react-dom": "^16.13.0",
+    "xml2js": "^0.4.23"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
