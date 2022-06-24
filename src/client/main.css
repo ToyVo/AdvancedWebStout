@@ -1,0 +1,21 @@
+.gameSummary {
+    border: 1px solid darkgrey;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 15px;
+    vertical-align: bottom;
+  }
+
+  .summaryTitle {
+    display: block;
+    font-size: medium;
+  }
+
+  .summaryInfo {
+    display: block;
+    font-size: medium;
+  }
+
+  .hidden {
+    display: none !important;
+  }
