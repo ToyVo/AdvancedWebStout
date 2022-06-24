@@ -27,7 +27,7 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="/CS404/Module1-1/index.html">1.1</a>
                         <a class="dropdown-item" href="/CS404/Module1-2/movieBrowse.php">1.2</a>
-                        <a class="dropdown-item" href="/CS404/Module1-3/index.html">1.3</a>
+                        <a class="dropdown-item" href="/CS404/Module1-3/index.php">1.3</a>
                     </div>
                 </li>
             </ul>
@@ -62,10 +62,7 @@
                 echo "      <div class='row' id='database'>\n";
 
                 $contimue = $stmt->fetch();
-                ?>
-                <!-- [ -->
-                <?php
-
+                // echo "[";
                 while ($contimue) {
                     // Output JSON for all movies
                 ?>
@@ -89,9 +86,7 @@
                         $contimue = false;
                     } ?>
                 <?php } //close while 
-                ?>
-                <!-- ] -->
-                <?php
+                // echo "]";
                 // Close the database connection
                 $stmt->close();
                 $db->close();
