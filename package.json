@@ -4,7 +4,9 @@
   "description": "Anything that I am doing during my Advanced Web and Internet Programming class",
   "main": "app.js",
   "private": true,
-  "scripts": {},
+  "scripts": {
+    "build": "babel src -o dist.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ToyVo/AdvancedWebStout.git"
@@ -28,6 +30,11 @@
     "@babel/preset-env": "^7.8.7",
     "@babel/preset-react": "^7.8.3",
     "eslint": "^6.8.0",
-    "eslint-plugin-react": "^7.19.0"
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-standard": "^4.0.1"
   }
 }

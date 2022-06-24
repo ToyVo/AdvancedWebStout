@@ -4,7 +4,7 @@ module.exports = {
     es6: true,
     node: true
   },
-  extends: ['eslint:recommended', 'plugin:react/recommended'],
+  extends: ['standard', 'eslint:"recommended', 'plugin:react/recommended'],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly'
@@ -17,12 +17,5 @@ module.exports = {
     sourceType: 'module'
   },
   plugins: ['react'],
-  rules: {
-    indent: ['error', 2],
-    'linebreak-style': ['error', 'unix'],
-    quotes: ['error', 'single'],
-    semi: ['error', 'always'],
-    'eol-last': ['error', 'always'],
-    'no-trailing-spaces': ['error']
-  }
-};
+  rules: {}
+}
