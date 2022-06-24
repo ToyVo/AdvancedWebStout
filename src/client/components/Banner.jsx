@@ -1,10 +1,20 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Typography from '@material-ui/core/Typography'
+import { makeStyles } from '@material-ui/core/styles'
+
+const useStyles = makeStyles((theme) => ({
+  banner: {
+    borderBottom: '1px solid grey',
+    marginBottom: theme.spacing(2)
+  }
+}))
 
 export default function Banner (props) {
-  return (<div className='pb-2 mt-4 mb-2 border-bottom full-width'>
-    <h1>{props.title}</h1>
-    {props.children}
+  const classes = useStyles()
+  return (<div className={classes.banner}>
+    <Typography variant='h1'>{props.title}</Typography>
+    <Typography variant='body1'>{props.children}</Typography>
   </div>)
 }
 

@@ -60,23 +60,19 @@ export default function App () {
     }} boardGame board game to be submitted to the database
    */
   const submitGame = (boardGame) => {
-    console.log(boardGame)
     setGamesData([...gamesData, boardGame])
   }
 
   return (<div>
-    <div className='container'>
-      <div className='row'>
-        <Banner title='Game Browser'>
-          Click on a game for more information
-        </Banner>
-      </div>
-      <GameGrid
-        gamesData={gamesData}
-        activeGameCallback={retrieveActiveMovie}
-      />
-      <AddGameButton submitGame={submitGame}/>
-    </div>
+
+    <Banner title='Game Browser'>
+      Click on a game for more information
+    </Banner>
+    <GameGrid
+      gamesData={gamesData}
+      activeGameCallback={retrieveActiveMovie}
+    />
+    <AddGameButton submitGame={submitGame}/>
     {activeGame &&
     <GameDetailsModal onCloseDetailsModal={() => setActiveGame(null)} deleteGame={deleteGame} game={activeGame}/>}
   </div>)

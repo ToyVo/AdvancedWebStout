@@ -1,8 +1,22 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import Axios from 'axios'
+import { Button, Dialog, DialogActions, DialogContent, DialogTitle, makeStyles, TextField } from '@material-ui/core'
+
+const useStyles = makeStyles((theme) => ({
+  form: {
+    '& > *': {
+      margin: theme.spacing(1),
+      width: '25ch'
+    }
+  }
+}))
 
 export default function AddGameButton (props) {
+  const classes = useStyles()
+
+  const [open, setOpen] = useState(false)
+  const [formError, setFormError] = useState(false)
   const [name, setName] = useState('')
   const [year, setYear] = useState('')
   const [minPlayers, setMinPlayers] = useState('')
@@ -18,20 +32,17 @@ export default function AddGameButton (props) {
   /**
    * open modal, used in the add game button
    */
-  const openModal = () => {
-    $('#addGameModal').modal({ backdrop: 'static' })
+  const handleOpen = () => {
+    setOpen(true)
   }
 
   /**
    * clean up after submission of a game, or on canceling submission
    */
-  const clearModal = () => {
-    // hide modal
-    $('#addGameModal').modal('hide')
+  const clearForm = () => {
+    setOpen(false)
     // clear validation css
-    $('#newGameForm').removeClass('was-validated')
-    // hide error alert
-    $('#addGameAlert').addClass('hidden')
+    setFormError(false)
 
     // reset state to default
     setName('')
@@ -49,19 +60,13 @@ export default function AddGameButton (props) {
 
   /**
    * handle the submit event
-   * @param {*} event submit event
    */
-  const submitGame = (event) => {
-    // stop submit event defaults
-    event.preventDefault()
-    event.stopPropagation()
-
+  const submitGame = () => {
     // get the form
     const form = document.getElementById('newGameForm')
     // check if the form is valid
     if (form.checkValidity() === false) {
-      // apply validation css if validation fails
-      form.classList.add('was-validated')
+      setFormError(true)
     } else {
       // construct board game from data submitted
       const boardGame = {
@@ -89,7 +94,7 @@ export default function AddGameButton (props) {
 
       Axios.post('/api/games', boardGame)
         .then((results) => {
-          clearModal(event)
+          clearForm()
           props.submitGame({
             _id: results.data._id,
             name: results.data.name,
@@ -98,238 +103,115 @@ export default function AddGameButton (props) {
         })
         .catch((error) => {
           console.error(error.message)
-          $('#addGameAlert').removeClass('hidden')
         })
     }
   }
 
   return (<div>
-    <div className='row'>
-      <button
-        id='addGameButton'
-        className='btn btn-primary'
-        onClick={openModal}
-      >
-        Add Game
-      </button>
-    </div>
-
-    <div
-      className='modal fade'
-      id='addGameModal'
-      tabIndex='-1'
-      role='dialog'
-      aria-labelledby='addGameModalLabel'
-      aria-hidden='true'
-    >
-      <div className='modal-dialog' role='document'>
-        <div className='modal-content'>
-          <div className='modal-header'>
-            <h5 className='modal-title' id='addGameModalLabel'>
-              Add Game
-            </h5>
-
-            <button
-              type='button'
-              className='close'
-              data-dismiss='modal'
-              aria-label='Close'
-            >
-              <span aria-hidden='true'>&times;</span>
-            </button>
-          </div>
-          <div
-            id='addGameAlert'
-            className='alert alert-success hidden'
-            role='alert'
-          >
-            There was an error entering the game. Maybe the ID was taken?
-          </div>
-          <form id='newGameForm' className='needs-validation' noValidate>
-            <div id='addGameModalBody' className='modal-body'>
-              <div className='form-row'>
-                <div className='col-md-6 mb-3'>
-                  <label htmlFor='newGameName'>Name</label>
-                  <input
-                    type='text'
-                    className='form-control'
-                    id='newGameName'
-                    placeholder='Name'
-                    name='name'
-                    value={name}
-                    onChange={event => setName(event.target.value)}
-                    required
-                  />
-                  <div className='invalid-feedback'>
-                    Please enter a name.
-                  </div>
-                </div>
-                <div className='col-md-6 mb-6'>
-                  <label htmlFor='newGameYear'>Year</label>
-                  <input
-                    type='number'
-                    className='form-control'
-                    id='newGameYear'
-                    name='year'
-                    placeholder='Year'
-                    required
-                    min='1800'
-                    max='2050'
-                    value={year}
-                    onChange={event => setYear(event.target.value)}
-                  />
-                  <div className='invalid-feedback'>
-                    Please enter a valid year.
-                  </div>
-                </div>
-              </div>
-              <div className='form-row'>
-                <div className='col-md-4 mb-3'>
-                  <label htmlFor='newGameMinPlayers'>Min Players</label>
-                  <input
-                    type='number'
-                    className='form-control'
-                    id='newGameMinPlayers'
-                    placeholder='Min Players'
-                    name='minPlayers'
-                    min='0'
-                    value={minPlayers}
-                    onChange={event => setMinPlayers(event.target.value)}
-                  />
-                  <div className='invalid-feedback'>Cannot be negative</div>
-                </div>
-                <div className='col-md-4 mb-3'>
-                  <label htmlFor='newGameMinPlayTime'>Min PlayTime</label>
-                  <input
-                    type='number'
-                    className='form-control'
-                    id='newGameMinPlayTime'
-                    placeholder='Min PlayTime'
-                    name='minPlaytime'
-                    min='0'
-                    value={minPlaytime}
-                    onChange={event => setMinPlaytime(event.target.value)}
-                  />
-                  <div className='invalid-feedback'>Cannot be negative</div>
-                </div>
-                <div className='col-md-4 mb-3'>
-                  <label htmlFor='newGameMinAge'>Min Age</label>
-                  <input
-                    type='number'
-                    className='form-control'
-                    id='newGameMinAge'
-                    placeholder='Min Age'
-                    name='minAge'
-                    min='0'
-                    value={minAge}
-                    onChange={event => setMinAge(event.target.value)}
-                  />
-                  <div className='invalid-feedback'>Cannot be negative</div>
-                </div>
-              </div>
-              <div className='form-row'>
-                <div className='col-md-4 mb-3'>
-                  <label htmlFor='newGameMaxPlayers'>Max Players</label>
-                  <input
-                    type='number'
-                    className='form-control'
-                    id='newGameMaxPlayers'
-                    placeholder='Max Players'
-                    name='maxPlayers'
-                    min='0'
-                    value={maxPlayers}
-                    onChange={event => setMaxPlayers(event.target.value)}
-                  />
-                  <div className='invalid-feedback'>Cannot be negative</div>
-                </div>
-                <div className='col-md-4 mb-3'>
-                  <label htmlFor='newGameMaxPlayTime'>Max PlayTime</label>
-                  <input
-                    type='number'
-                    className='form-control'
-                    id='newGameMaxPlayTime'
-                    placeholder='Max PlayTime'
-                    name='maxPlaytime'
-                    min='0'
-                    value={maxPlaytime}
-                    onChange={event => setMaxPlaytime(event.target.value)}
-                  />
-                  <div className='invalid-feedback'>Cannot be negative</div>
-                </div>
-                <div className='col-md-4 mb-3'>
-                  <label htmlFor='newGameRating'>Rating</label>
-                  <input
-                    type='number'
-                    className='form-control'
-                    id='newGameRating'
-                    placeholder='Rating'
-                    name='rating'
-                    min='0'
-                    max='10'
-                    step='0.1'
-                    value={rating}
-                    onChange={event => setRating(event.target.value)}
-                  />
-                  <div className='invalid-feedback'>0 to 10</div>
-                </div>
-              </div>
-              <div className='form-row'>
-                <label htmlFor='newGameDesigners'>Designers</label>
-                <input
-                  type='text'
-                  className='form-control'
-                  id='newGameDesigners'
-                  name='designers'
-                  placeholder='Designers'
-                  value={designers}
-                  onChange={event => setDesigners(event.target.value)}
-                />
-              </div>
-              <div className='form-row'>
-                <label htmlFor='newGameArtists'>Artists</label>
-                <input
-                  type='text'
-                  className='form-control'
-                  id='newGameArtists'
-                  name='artists'
-                  placeholder='Artists'
-                  value={artists}
-                  onChange={event => setArtists(event.target.value)}
-                />
-              </div>
-              <div className='form-row'>
-                <label htmlFor='newGamePublishers'>Publishers</label>
-                <input
-                  type='text'
-                  className='form-control'
-                  id='newGamePublishers'
-                  name='publishers'
-                  placeholder='Publishers'
-                  value={publishers}
-                  onChange={event => setPublishers(event.target.value)}
-                />
-              </div>
-            </div>
-            <div className='modal-footer'>
-              <button
-                type='reset'
-                className='btn btn-secondary'
-                onClick={clearModal}
-              >
-                Close
-              </button>
-              <button
-                type='submit'
-                className='btn btn-primary'
-                onClick={submitGame}
-              >
-                Save changes
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
+    <Button variant='contained' color='primary' onClick={handleOpen}>
+      Add Game
+    </Button>
+    <Dialog open={open} disableBackdropClick={true} aria-labelledby='add-game-title'>
+      <DialogTitle>Add Game</DialogTitle>
+      <DialogContent>
+        <form noValidate autoComplete='off' id='newGameForm' className={classes.form}>
+          <TextField id='newGameName'
+            label='Name' value={name}
+            onChange={event => setName(event.target.value)}
+            error={formError}
+            required={true}
+          />
+          <TextField id='newGameYear'
+            label='Year' value={year}
+            onChange={event => setYear(event.target.value)}
+            helperText='1800 - 2050'
+            error={formError}
+            required={true} type='number'
+            inputProps={{
+              min: '1800',
+              max: '2050',
+              step: '1'
+            }}
+          />
+          <TextField id='newGameMinPlayers'
+            label='Min Players' value={minPlayers}
+            onChange={event => setMinPlayers(event.target.value)}
+            type='number'
+            helperText='0+'
+            inputProps={{
+              min: '0',
+              step: '1'
+            }}
+          />
+          <TextField id='newGameMaxPlayers'
+            label='Max Players' value={maxPlayers}
+            onChange={event => setMaxPlayers(event.target.value)}
+            type='number'
+            helperText='0+'
+            inputProps={{
+              min: '0',
+              step: '1'
+            }}
+          />
+          <TextField id='newGameMinPlaytime'
+            label='Min Playtime' value={minPlaytime}
+            onChange={event => setMinPlaytime(event.target.value)}
+            type='number' helperText='0+'
+            inputProps={{
+              min: '0',
+              step: '1'
+            }}
+          />
+          <TextField id='newGameMaxPlaytime'
+            label='Max Playtime' value={maxPlaytime}
+            onChange={event => setMaxPlaytime(event.target.value)}
+            type='number' helperText='0+'
+            inputProps={{
+              min: '0',
+              step: '1'
+            }}
+          />
+          <TextField id='newGameMinAge'
+            label='Min Age' value={minAge}
+            onChange={event => setMinAge(event.target.value)}
+            type='number' helperText='0+'
+            inputProps={{
+              min: '0',
+              step: '1'
+            }}
+          />
+          <TextField id='newGameRating'
+            label='Rating' value={rating}
+            onChange={event => setRating(event.target.value)}
+            type='number' helperText='0 - 10'
+            inputProps={{
+              min: '0',
+              max: '10',
+              step: '0.1'
+            }}
+          />
+          <TextField id='newGameDesigners'
+            label='Designers' value={designers}
+            onChange={event => setDesigners(event.target.value)}
+            helperText='Comma separated'
+          />
+          <TextField id='newGameArtists'
+            label='Artists' value={artists}
+            onChange={event => setArtists(event.target.value)}
+            helperText='Comma separated'
+          />
+          <TextField id='newGamePublishers'
+            label='Publishers' value={publishers}
+            onChange={event => setPublishers(event.target.value)}
+            helperText='Comma separated'
+          />
+        </form>
+      </DialogContent>
+      <DialogActions>
+        <Button onClick={submitGame} variant='contained' color='primary'>Save</Button>
+        <Button onClick={clearForm} variant='outlined' color='primary'>Close</Button>
+      </DialogActions>
+    </Dialog>
   </div>)
 }
 

@@ -1,5 +1,4 @@
 const path = require('path')
-const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = (env, argv) => {
@@ -49,12 +48,6 @@ module.exports = (env, argv) => {
     },
 
     plugins: [
-      new webpack.ProvidePlugin({
-        $: 'jquery',
-        jQuery: 'jquery',
-        'window.jQuery': 'jquery',
-        Popper: ['popper.js', 'default']
-      }),
       new HtmlWebpackPlugin({
         template: path.join(__dirname, 'src', 'client', 'index.html'),
         filename: path.join(__dirname, 'public', 'index.html'),
