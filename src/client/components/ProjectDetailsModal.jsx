@@ -1,14 +1,19 @@
-import { Button, Dialog, DialogActions, DialogContent, DialogTitle, GridList, GridListTile, makeStyles } from '@material-ui/core'
+import { Button, Dialog, DialogActions, DialogContent, DialogTitle, GridList, GridListTile, makeStyles, Typography } from '@material-ui/core'
 import Axios from 'axios'
 import PropTypes from 'prop-types'
 import React, { useState, useEffect } from 'react'
 import Transition from '../helpers/Transition.jsx'
-import moment from 'moment'
 
 const useStyles = makeStyles((theme) => (
   {
     downloadButton: {
       margin: theme.spacing(1)
+    },
+    title: {
+      display: 'inline'
+    },
+    padLeft: {
+      display: 'inline', paddingLeft: '10px'
     }
   }
 ))
@@ -51,14 +56,16 @@ export default function ProjectDetailsModal (props) {
       aria-labelledby='details-dialog-title'
       scroll='body'
     >
-      <DialogTitle id='details-dialog-title'>{props.project.name}</DialogTitle>
+      <DialogTitle id='details-dialog-title'>
+        <Typography variant='h5' component='span' className={classes.title}>
+          {props.project.name}
+        </Typography>
+        <Typography variant='h6' component='span' color='textSecondary' className={classes.padLeft}>
+          - {props.project.creator}
+        </Typography>
+      </DialogTitle>
       <DialogContent>
-        <ul>
-          <li>creator = {props.project.creator}</li>
-          <li>publishDate = {moment(props.project.publishDate).format('MMM Do YYYY')}</li>
-          <li>updateDate = {moment(props.project.updateDate).fromNow()}</li>
-        </ul>
-        <GridList cellHeight={160} cols={3}>
+        <GridList>
           {props.project.imageURLs.map((imageURL) => (
             <GridListTile key={imageURL}>
               <img src={imageURL} alt={imageURL}/>

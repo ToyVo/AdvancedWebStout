@@ -6,7 +6,7 @@ import ProjectDetailsModal from './ProjectDetailsModal.jsx'
 import ProjectGrid from './ProjectGrid.jsx'
 import AddProjectButton from './AddProjectButton.jsx'
 
-export default function App() {
+export default function App () {
   const [projectsData, setProjectsData] = useState([])
   const [activeProject, setActiveProject] = useState(null)
   const [activeEditProject, setActiveEditProject] = useState(null)
@@ -61,8 +61,10 @@ export default function App() {
      }} project updated from the database
     */
   const updateProject = (project) => {
-    deleteProject(project._id)
-    submitProject(project)
+    const updatedArray = [...projectsData]
+    const index = updatedArray.findIndex(obj => obj._id === project._id)
+    updatedArray[index] = project
+    setProjectsData(updatedArray)
   }
 
   /**
