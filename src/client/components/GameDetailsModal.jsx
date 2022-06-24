@@ -4,7 +4,9 @@ import Axios from 'axios'
 
 export default function GameDetailsModal (props) {
   useEffect(() => {
-    $('#boardGameModal').modal()
+    $('#boardGameModal').modal().on('hidden.bs.modal', () => {
+      props.onCloseDetailsModal()
+    })
   })
 
   const deleteGame = () => {
@@ -77,5 +79,6 @@ export default function GameDetailsModal (props) {
 
 GameDetailsModal.propTypes = {
   game: PropTypes.object.isRequired,
-  deleteGame: PropTypes.func.isRequired
+  deleteGame: PropTypes.func.isRequired,
+  onCloseDetailsModal: PropTypes.func.isRequired
 }
