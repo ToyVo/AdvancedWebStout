@@ -11,9 +11,9 @@ export default class BoardGame {
    * @param {number} maxPlayers maximum players that can play the game
    * @param {number} minPlaytime minimum estimated playtime
    * @param {number} maxPlaytime maximum estimated playtime
-   * @param {number} minAge minimum reccomended age for a player
+   * @param {number} minAge minimum recommended age for a player
    * @param {string[]} designers list of contributing designers
-   * @param {string[]} artists list of contributing artits
+   * @param {string[]} artists list of contributing artists
    * @param {string[]} publishers list of publishers for game
    * @param {number} id unique identifies corresponding to BGG game id
    */
