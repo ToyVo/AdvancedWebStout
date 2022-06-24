@@ -1,32 +1,36 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Axios from 'axios'
 import Banner from './Banner.jsx'
 import GameGrid from './GameGrid.jsx'
 import GameDetailsModal from './GameDetailsModal.jsx'
 import AddGameButton from './AddGameButton.jsx'
 
-class App extends React.Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      gamesData: [],
-      activeGame: null
-    }
-    this.setActiveGame = this.setActiveGame.bind(this)
-    this.submitGame = this.submitGame.bind(this)
-    this.deleteGame = this.deleteGame.bind(this)
+export default function App () {
+  const [gamesData, setGamesData] = useState([])
+  const [activeGame, setActiveGame] = useState(null)
+
+  if (gamesData.length === 0) {
+    /**
+     * fetch all data from server on mount
+     */
+    Axios.get('/api/games')
+      .then((results) => {
+        setGamesData(results.data)
+      })
+      .catch((e) => {
+        console.error('unable to retrieve movies')
+        console.error(e.message)
+      })
   }
 
   /**
    * set the active game for use in the game details modal
    * @param {string} gameID the id of the game
    */
-  setActiveGame (gameID) {
+  const retrieveActiveMovie = (gameID) => {
     Axios.get(`/api/games/${gameID}`)
       .then((results) => {
-        this.setState({
-          activeGame: results.data
-        })
+        setActiveGame(results.data)
       })
       .catch((e) => {
         console.error('error retrieving game data')
@@ -34,10 +38,8 @@ class App extends React.Component {
       })
   }
 
-  deleteGame (gameID) {
-    this.setState({
-      gamesData: this.state.gamesData.filter(game => game._id !== gameID)
-    })
+  const deleteGame = (gameID) => {
+    setGamesData(gamesData.filter(game => game._id !== gameID))
   }
 
   /**
@@ -57,44 +59,24 @@ class App extends React.Component {
     _id: string
     }} boardGame board game to be submitted to the database
    */
-  submitGame (boardGame) {
+  const submitGame = (boardGame) => {
     console.log(boardGame)
-    this.setState({ gamesData: [...this.state.gamesData, boardGame] })
+    setGamesData([...gamesData, boardGame])
   }
 
-  /**
-   * fetch all data from server on mount
-   */
-  componentDidMount () {
-    Axios.get('/api/games')
-      .then((results) => {
-        this.setState({
-          gamesData: results.data
-        })
-      })
-      .catch((e) => {
-        console.error('unable to retrieve movies')
-        console.error(e.message)
-      })
-  }
-
-  render () {
-    return (<div>
-      <div className='container'>
-        <div className='row'>
-          <Banner title='Game Browser'>
-            Click on a game for more information
-          </Banner>
-        </div>
-        <GameGrid
-          gamesData={this.state.gamesData}
-          activeGameCallback={this.setActiveGame}
-        />
-        <AddGameButton submitGame={this.submitGame}/>
+  return (<div>
+    <div className='container'>
+      <div className='row'>
+        <Banner title='Game Browser'>
+          Click on a game for more information
+        </Banner>
       </div>
-      {this.state.activeGame && (<GameDetailsModal deleteGame={this.deleteGame} game={this.state.activeGame}/>)}
-    </div>)
-  }
+      <GameGrid
+        gamesData={gamesData}
+        activeGameCallback={retrieveActiveMovie}
+      />
+      <AddGameButton submitGame={submitGame}/>
+    </div>
+    {activeGame && <GameDetailsModal deleteGame={deleteGame} game={activeGame}/>}
+  </div>)
 }
-
-export default App
