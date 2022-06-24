@@ -6,7 +6,7 @@ import { makeStyles } from '@material-ui/core/styles'
 const useStyles = makeStyles((theme) => ({
   banner: {
     borderBottom: '1px solid grey',
-    marginBottom: theme.spacing(2)
+    padding: theme.spacing(2)
   }
 }))
 

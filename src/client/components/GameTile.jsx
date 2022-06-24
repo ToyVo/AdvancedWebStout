@@ -1,14 +1,23 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Grid from '@material-ui/core/Grid'
-import Paper from '@material-ui/core/Paper'
-import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/core/styles'
+import { Button, Grid, Typography } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
-  root: {},
+  title: {
+    fontSize: theme.spacing(1.5)
+  },
   paper: {
-    textAlign: 'center',
+    backgroundColor: '#FFF',
+    padding: '5px',
+    margin: theme.spacing(1),
+    width: theme.spacing(16),
+    height: theme.spacing(12),
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  buttonRipple: {
     padding: '5px',
     margin: theme.spacing(1),
     width: theme.spacing(16),
@@ -21,24 +30,20 @@ export default function GameTile (props) {
 
   /**
    * when the tile is clicked, pass event up to open modal
-   * @param {*} event click event
    */
-  const gameTileClicked = (event) => {
-    event.preventDefault()
+  const gameTileClicked = () => {
     props.activeGameCallback(props.gameData._id)
   }
 
-  return (<Grid item>
-    <Paper variant='outlined' className={classes.paper}>
-      <a
-        onClick={gameTileClicked}
-        className='gameTileLink'
-        href={`/api/games/${props.gameData._id}`}
-      >
-        <Typography variant='body1'>{props.gameData.name}</Typography>
-      </a>
-    </Paper>
-  </Grid>)
+  return (
+    <Grid item>
+      <Button variant='contained' onClick={gameTileClicked} className={classes.paper}>
+        <Typography variant='body1' className={classes.title}>
+          {props.gameData.name}
+        </Typography>
+      </Button>
+    </Grid>
+  )
 }
 
 GameTile.propTypes = {

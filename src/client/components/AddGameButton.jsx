@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import Axios from 'axios'
 import { Button, Dialog, DialogActions, DialogContent, DialogTitle, makeStyles, TextField } from '@material-ui/core'
+import Transition from '../helpers/Transition.jsx'
 
 const useStyles = makeStyles((theme) => ({
   form: {
@@ -111,7 +112,7 @@ export default function AddGameButton (props) {
     <Button variant='contained' color='primary' onClick={handleOpen}>
       Add Game
     </Button>
-    <Dialog open={open} disableBackdropClick={true} aria-labelledby='add-game-title'>
+    <Dialog TransitionComponent={Transition} open={open} disableBackdropClick={true} aria-labelledby='add-game-title'>
       <DialogTitle>Add Game</DialogTitle>
       <DialogContent>
         <form noValidate autoComplete='off' id='newGameForm' className={classes.form}>
