@@ -1,6 +1,15 @@
 const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const fs = require('fs')
+
+const rawGames = fs.readFileSync('src/server/api/games.json')
+const games = JSON.parse(rawGames)
+const partialGames = games.map((game) => ({
+  id: game.id,
+  name: game.name,
+  year: game.year
+}))
 
 module.exports = (env, argv) => {
   const config = {
@@ -58,8 +67,12 @@ module.exports = (env, argv) => {
         Popper: ['popper.js', 'default']
       }),
       new HtmlWebpackPlugin({
-        template: path.join(__dirname, 'src', 'client', 'index.html'),
-        filename: path.join(__dirname, 'public', 'index.html')
+        template: path.join(__dirname, 'src', 'client', 'views', 'index.ejs'),
+        filename: path.join(__dirname, 'public', 'index.html'),
+        templateParameters: {
+          gameData: partialGames
+        },
+        inject: 'head'
       })
     ]
   }
